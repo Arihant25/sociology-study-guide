@@ -1,0 +1,771 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sociology Midsem Guide</title>
+<meta name="description" content="An interactive study guide for the Intro to Sociology midterm — Giddens, Grint, and course Modules 1, 3, 4 & 5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<div id="progress-bar"></div>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open contents">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a class="brand" href="#top">
+    <span class="glyph">§</span>
+    <b>Sociology<span>Midsem Study Guide</span></b>
+  </a>
+  <div class="spacer"></div>
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="search" type="search" placeholder="Search notes, thinkers, terms…" aria-label="Search the study guide" autocomplete="off">
+    <kbd>/</kbd>
+  </div>
+  <button class="icon-btn" id="theme-toggle" aria-label="Toggle light / dark theme">
+    <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+<div class="scrim" id="scrim"></div>
+
+<div class="shell" id="top">
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="side-title">Contents</div>
+    <ul class="toc" id="toc"></ul>
+
+    <div class="side-card">
+      <div class="ring-wrap">
+        <div class="ring" id="ring"><b id="ring-pct">0%</b></div>
+        <div class="lbl" id="ring-label"><b>0 / 8 revised</b>tick sections as you go</div>
+      </div>
+      <div class="mini-actions">
+        <button class="mini-btn" id="reset-progress">Reset progress</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="eyebrow">Intro to Sociology · Midterm Revision</div>
+      <h1>The Sociological <em>Enterprise</em>, in one place.</h1>
+      <p class="lede">Everything for the midsem — distilled from Giddens and Grint and your course modules on the founding thinkers, social reproduction, and stratification. Tick off what you've revised, flip flashcards for key terms, and search the whole guide instantly.</p>
+      <div class="hero-meta">
+        <span class="pill"><span class="k"></span>Giddens — Ch 1, 2, 9</span>
+        <span class="pill teal"><span class="k"></span>Grint — Ch 3</span>
+        <span class="pill gold"><span class="k"></span>Modules 1 · 3 · 4 · 5</span>
+      </div>
+
+      <div class="map">
+        <a class="map-card" href="#m1"><span class="tag">Module 1</span><h3>The Sociological Enterprise</h3><p>What sociology is · origins · sociology in India</p></a>
+        <a class="map-card c-teal" href="#g1"><span class="tag">Giddens 1</span><h3>What is Sociology?</h3><p>Imagination · structure &amp; agency · the founders</p></a>
+        <a class="map-card c-teal" href="#g2"><span class="tag">Giddens 2</span><h3>Sociological Questions</h3><p>Research process · methods · ethics</p></a>
+        <a class="map-card" href="#m3"><span class="tag">Module 3</span><h3>Marx · Weber · Durkheim</h3><p>Alienation · solidarity · rationalization</p></a>
+        <a class="map-card c-gold" href="#grint"><span class="tag">Grint 3</span><h3>Classical Approaches to Work</h3><p>The "gang of three" as foundation stones</p></a>
+        <a class="map-card" href="#iphone"><span class="tag">Case study</span><h3>The iPhone &amp; Exploitation</h3><p>Rate of surplus value = 2458%</p></a>
+        <a class="map-card c-gold" href="#m4"><span class="tag">Module 4</span><h3>Social Reproduction</h3><p>Housewifisation · the value debate · Mezzadri</p></a>
+        <a class="map-card c-teal" href="#m5"><span class="tag">Module 5 · Giddens 9</span><h3>Stratification &amp; Class</h3><p>Systems · Marx/Weber · mobility · meritocracy</p></a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 · MODULE 1 — THE SOCIOLOGICAL ENTERPRISE
+    ============================================================ -->
+    <section class="section" id="m1" data-num="01" data-title="The Sociological Enterprise">
+      <div class="section-head">
+        <div class="section-index">01</div>
+        <div class="htext">
+          <h2>The Sociological Enterprise</h2>
+          <div class="source">Module 1 · <b>Lectures 1–2, IGNOU Units 1–2, Berger</b></div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <h3>What is sociology?</h3>
+        <p><dfn>Sociology</dfn> is the study of society — of individuals and groups, of social structures, institutions and cultures, and above all of the <b>relationship between individuals and the larger society</b> around them. It is a <dfn>humanistic social science</dfn>: it aims at objectivity and generalisation, yet must take account of the specific ideas, values and predicaments of real human groups in particular historical circumstances.</p>
+        <p>Its core concerns include social institutions (caste, class, tribe/ethnicity, gender, religion, family) and social processes (power and authority, urbanisation and migration, industrialisation, ecological change, mobility and social movements). A recurring question: if we all talk about society in everyday life, is sociology just <b>common sense</b>? The discipline defines itself precisely by breaking with common sense.</p>
+
+        <h3>Seeing sociologically — Berger &amp; Mills</h3>
+        <p>The <dfn>sociological perspective</dfn> (a term from <b>Peter Berger</b>) means seeing <b>"the general in the particular"</b> — locating general social patterns in the lives of specific individuals, and grasping how personal choice is shaped by structures and norms. Berger frames sociology as an <b>art of skepticism</b> and an <b>"art of mistrust"</b>: value-free intellectual training that questions the taken-for-granted, looks "behind the scenes," and attends to the unofficial and the unrespectable. His moves — to <b>debunk</b>, to <b>relativize</b>, and to reach a <b>cosmopolitan imagination</b> — reveal how social reality is constructed. ("Seeing is not understanding.")</p>
+        <p><dfn>The sociological imagination</dfn> (<b>C. Wright Mills</b>) is the capacity to grasp <b>history and biography and the relations between the two within society</b>: "neither the life of an individual nor the history of a society can be understood without understanding both." Everyday examples — the ritual and global economy behind a cup of coffee; the university as a space of knowledge, mobility and dissent — show the imagination at work.</p>
+
+        <div class="callout key">
+          <div class="clabel">Key distinction</div>
+          <p><b>Sociological perspective (Berger)</b> = seeing the general in the particular · <b>Sociological imagination (Mills)</b> = linking private biography to public history and structure. Expect a question asking you to define and contrast both.</p>
+        </div>
+
+        <h3>Why sociology arose in the West</h3>
+        <p>Modern academic sociology emerged from five interlinked upheavals in Europe (14th–18th c.), sociology being "an intellectual response to the problems society faced as a result of industrialisation" (Singh 1979):</p>
+        <ul>
+          <li><b>Enlightenment &amp; Scientific Revolution</b> — Copernicus, Kepler, Galileo, Newton; the scientific method (observation, experiment, hypothesis) eroded the authority of faith.</li>
+          <li><b>Exploration &amp; colonisation</b> — the growth of capitalism, wealth from colonies, and the need to understand "the other" → sociology / anthropology.</li>
+          <li><b>Industrial Revolution &amp; urbanisation</b> — a definitive break from feudalism; by 1850, cities held 52% of England's population (25% France, 36% Germany).</li>
+          <li><b>Rise of individualism</b> — decline of the Catholic Church, rise of Protestantism, and a shift from <b>ascribed to achieved status</b>.</li>
+          <li><b>Revolutions &amp; nation-states</b> — the French and American Revolutions; the idea of accountable government; thinkers from Montesquieu and Rousseau to Saint-Simon and Comte.</li>
+        </ul>
+        <p><b>Auguste Comte (1798–1857)</b> coined the term <b>"Sociology" in 1838</b> and called it the <b>"queen of the sciences."</b> Crucially — a key contrast for India — <b>no industrial bourgeoisie arose in India</b> when sociology arrived there.</p>
+
+        <h3>The development of sociology in India</h3>
+        <p>Indian sociology bears the imprint of Western sociology <em>and</em> a rich indigenous heritage of social thought (Kautilya's <em>Arthashastra</em> recommended a census; the <em>Charakasamhita</em> urged attention to custom; the Lokayata/Charvaka were materialists). It emerged as the <b>intellectual response of Indians to Western interpretations of Indian society</b>, within a colonial context. Lecture 2 sets out <b>three phases</b>:</p>
+
+        <h4>Phase I — Colonial modernity &amp; anthropology</h4>
+        <ul>
+          <li><b>"Sociology in Europe vs anthropology in the colonies."</b> Colonial anthropology was the <b>"handmaiden of colonialism"</b> — census, ethnography and anthropometry classified a society imagined as static and traditional, aided by evolutionary and Aryan-invasion theories, gazetteers, and the caste/tribe distinction. Caste became the imagined <b>"essence" of Indian society.</b></li>
+          <li>The <b>Indological approach</b> studied society through scriptures, privileging Brahminical knowledge and rationalising the <b>varna</b> hierarchy.</li>
+          <li><b>Bombay School</b> — <b>G.S. Ghurye</b> (first Sociology Dept, Bombay; Indological; empirical but under-theorised; Eurocentric categories). <b>Lucknow School</b> — <b>Radhakamal Mukerjee &amp; D.P. Mukerji</b> (analytical, empirical, interdisciplinary; present/future-oriented).</li>
+        </ul>
+
+        <h4>Phase II — Nationalist sociology</h4>
+        <ul>
+          <li><b>M.N. Srinivas</b> — carried forward Ghurye's tradition but via the <b>field view (ethnography)</b>; the village as setting; concepts of <b>Sanskritisation</b>, <b>Westernisation</b> and the <b>"dominant caste."</b> Criticised for conflating "caste" and "village" and institutionalising a "Savarna" idea of the nation.</li>
+          <li><b>A.R. Desai</b> — a <b>Marxist</b> approach: political economy and the <b>historical method</b>, class analysis of nationalism, and attention to social movements and those left out of dominant interpretations.</li>
+        </ul>
+
+        <h4>Phase III — Post-1970s: multiple challenges</h4>
+        <ul>
+          <li>Crisis in higher education; the social movements of the 1970s–80s; interrogation of the Indian state (T.K. Oommen); the rise of globalisation and communalism; and new <b>subaltern, post-colonial, feminist, Adivasi and Dalit</b> critiques.</li>
+        </ul>
+
+        <div class="callout classic">
+          <div class="clabel">Institutional milestones</div>
+          <p>Asiatic Society of Bengal <b>1797</b> · first census <b>1861</b> · Ethnographic Survey <b>1901/1905</b> · teaching of sociology at Bombay <b>1919</b> · only three universities (Bombay, Calcutta, Lucknow) by <b>1947</b> · Indian Sociological Society <b>1952</b> · ICSSR <b>1969</b>. The <b>Ford Foundation</b> (1951–70) and Community Development pushed American-style survey methods after 1950.</p>
+        </div>
+
+        <div class="defs">
+          <div><dt>Sociological perspective</dt><dd>Berger's term for seeing "the general in the particular" — general patterns within specific lives.</dd></div>
+          <div><dt>Sociological imagination</dt><dd>Mills' capacity to connect private biography to public history and social structure.</dd></div>
+          <div><dt>Debunk / Relativize</dt><dd>Berger's sociological moves: unmasking official accounts and situating meanings, toward a "cosmopolitan imagination."</dd></div>
+          <div><dt>Sanskritisation</dt><dd>Srinivas: process by which lower castes emulate the customs of higher castes to raise status.</dd></div>
+          <div><dt>Dominant caste</dt><dd>Srinivas: the caste that holds numerical, economic and political power in a village.</dd></div>
+          <div><dt>Indological approach</dt><dd>Studying Indian society through sacred scriptures, privileging Brahminical knowledge.</dd></div>
+          <div><dt>Anthropology as "handmaiden of colonialism"</dt><dd>Colonial-era anthropology producing classified knowledge that served imperial rule.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define and <b>contrast</b> sociological perspective (Berger) vs sociological imagination (Mills); know Mills' history-and-biography quote.</li>
+            <li>Comte coined "Sociology" in <b>1838</b> (1798–1857), the "queen of the sciences."</li>
+            <li>The <b>five conditions</b> of Western sociology's birth — and that no industrial bourgeoisie arose in India.</li>
+            <li>The <b>three phases</b> of Indian sociology; Bombay (Ghurye/Indological) vs Lucknow (empirical); Srinivas vs A.R. Desai.</li>
+            <li>Anthropology as "handmaiden of colonialism"; the three Western approaches — <b>orientalist, missionary, administrative</b> (Cohn/Singh).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · GIDDENS CH 1 — WHAT IS SOCIOLOGY?
+    ============================================================ -->
+    <section class="section" id="g1" data-num="02" data-title="What is Sociology? (Giddens 1)">
+      <div class="section-head">
+        <div class="section-index">02</div>
+        <div class="htext">
+          <h2>What is Sociology?</h2>
+          <div class="source">Giddens, <em>Sociology</em> (9th ed.) · <b>Chapter 1</b></div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <h3>The sociological imagination</h3>
+        <p><dfn>Sociology</dfn> is the systematic study of human social life, groups and societies — from fleeting encounters to global processes. Its master concept is Mills' <dfn>sociological imagination</dfn>: the capacity to "think ourselves away" from familiar routines and connect <b>personal troubles</b> to <b>public issues</b>. One unemployed person is a personal trouble; mass unemployment is a public issue rooted in social structure. Sociology repeatedly overturns "common sense" — e.g. romantic love as a basis for marriage is historically recent, not natural or universal.</p>
+
+        <h3>Two founding tensions</h3>
+        <ul>
+          <li><dfn>Structure vs agency</dfn> — society has a structure that constrains us, yet we are active agents who create and reshape it; structures are <b>reproduced through human action</b>.</li>
+          <li><dfn>Micro vs macro</dfn> — micro-sociology studies face-to-face interaction; macro-sociology studies large-scale systems (economies, whole societies). The two are closely connected.</li>
+        </ul>
+        <p>Sociology differs from natural science because humans are <b>self-aware</b> and confer meaning on what they do.</p>
+
+        <h3>The four founders</h3>
+        <div class="thinkers">
+          <div class="thinker marx">
+            <div class="avatar">M</div>
+            <h4>Karl Marx</h4>
+            <div class="years">1818–1883</div>
+            <ul>
+              <li>Materialist conception of history (economic base shapes society)</li>
+              <li>Capitalism &amp; <b>class conflict</b>: bourgeoisie vs proletariat</li>
+              <li>Exploitation; expectation of revolutionary change</li>
+            </ul>
+          </div>
+          <div class="thinker durkheim">
+            <div class="avatar">D</div>
+            <h4>Émile Durkheim</h4>
+            <div class="years">1858–1917</div>
+            <ul>
+              <li>Study <b>social facts</b> "as things"</li>
+              <li>Mechanical → organic solidarity; <b>anomie</b></li>
+              <li><em>Suicide</em>: even the most personal act has social causes</li>
+            </ul>
+          </div>
+          <div class="thinker weber">
+            <div class="avatar">W</div>
+            <h4>Max Weber</h4>
+            <div class="years">1864–1920</div>
+            <ul>
+              <li><b>Verstehen</b> — interpretive understanding of meaning</li>
+              <li>Protestant Ethic &amp; the spirit of capitalism (ideas matter)</li>
+              <li><b>Rationalization</b>, bureaucracy, the "iron cage," ideal types</li>
+            </ul>
+          </div>
+        </div>
+        <p><b>Auguste Comte (1798–1857)</b> coined "sociology," wanted a <b>positivist</b> science, and proposed the <b>law of three stages</b> (theological → metaphysical → positive), distinguishing <b>social statics</b> (order) from <b>social dynamics</b> (change).</p>
+
+        <div class="callout">
+          <div class="clabel">Broadening the canon</div>
+          <p>Early sociology largely excluded women and non-Western voices. <b>Harriet Martineau</b> (often "the first woman sociologist"; translated Comte; studied women and slavery) and <b>W.E.B. Du Bois</b> (race and "the colour line") are now recognised founders.</p>
+        </div>
+
+        <h3>Traditions &amp; uses</h3>
+        <ul>
+          <li><b>Functionalism</b> (from Comte/Durkheim) · <b>Conflict/Marxist</b> approaches (from Marx) · <b>Symbolic interactionism</b> (from Weber via G.H. Mead).</li>
+          <li><dfn>Reflexivity</dfn> — because society studies itself, sociological knowledge feeds back into and changes social life.</li>
+          <li><dfn>Public sociology</dfn> (Michael Burawoy) — sociology should engage wider publics, not only academics.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Sociological imagination</dt><dd>Mills: linking personal troubles to public issues and wider social forces.</dd></div>
+          <div><dt>Structure vs agency</dt><dd>The constraint of social structures vs humans' capacity to act and reshape them; structure is reproduced through action.</dd></div>
+          <div><dt>Social facts</dt><dd>Durkheim: aspects of social life external to and constraining the individual, to be studied "as things."</dd></div>
+          <div><dt>Anomie</dt><dd>Durkheim: normlessness/aimlessness produced when rapid change loosens traditional norms.</dd></div>
+          <div><dt>Verstehen</dt><dd>Weber: interpretive understanding of the subjective meanings actors attach to their behaviour.</dd></div>
+          <div><dt>Rationalization</dt><dd>Weber: the spread of calculation, efficiency and bureaucracy as the defining trend of modernity (the "iron cage").</dd></div>
+          <div><dt>Reflexivity</dt><dd>Sociological knowledge feeds back into society and alters the behaviour it describes.</dd></div>
+          <div><dt>Public sociology</dt><dd>Burawoy: a sociology addressed to publics and matters of public concern.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define the sociological imagination with the <b>troubles vs issues</b> distinction.</li>
+            <li>Compare the four founders (Comte / Durkheim / Marx / Weber) in one line each.</li>
+            <li><b>Structure vs agency</b>; <b>micro vs macro</b>.</li>
+            <li>How sociology differs from common sense and from natural science.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · GIDDENS CH 2 — ASKING & ANSWERING SOCIOLOGICAL QUESTIONS
+    ============================================================ -->
+    <section class="section" id="g2" data-num="03" data-title="Sociological Questions (Giddens 2)">
+      <div class="section-head">
+        <div class="section-index">03</div>
+        <div class="htext">
+          <h2>Asking &amp; Answering Sociological Questions</h2>
+          <div class="source">Giddens, <em>Sociology</em> (9th ed.) · <b>Chapter 2</b></div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <h3>Research ethics</h3>
+        <p>The chapter opens with <b>Laud Humphreys' <em>Tearoom Trade</em></b>: covert observation of anonymous encounters in public toilets, where Humphreys posed as a "watchqueen," traced men via number plates and interviewed them in disguise. It dramatises the core ethical principles — <b>informed consent, avoiding harm, confidentiality/anonymity, honesty</b> — and why sociologists face dilemmas natural scientists do not: their subjects are people.</p>
+
+        <h3>Is sociology a science?</h3>
+        <ul>
+          <li><dfn>Positivism</dfn> — knowledge should rest only on observable facts; model sociology on natural science (induction; the Vienna Circle).</li>
+          <li><b>Karl Popper — falsificationism</b>: science advances by trying to <b>falsify</b> theories; a theory is scientific only if falsifiable (hypothetico-deductive method).</li>
+          <li><b>Thomas Kuhn — paradigms</b>: "normal science" within a dominant <b>paradigm</b>, punctuated by <b>scientific revolutions</b>. <b>Feyerabend</b>: "anything goes."</li>
+          <li>Verdict: sociology is scientific in being systematic, evidence-based and self-critical — both quantitative and qualitative work can be scientific.</li>
+        </ul>
+
+        <h3>The research process</h3>
+        <p>Seven stages: define the <b>research problem</b> → review the evidence → make it precise (a <dfn>hypothesis</dfn>) → design the research → collect data → interpret → report (and invite replication).</p>
+        <div class="callout key">
+          <div class="clabel">Two words examiners love</div>
+          <p><b>Reliability</b> = consistency (same result if repeated). <b>Validity</b> = does the study actually measure what it claims to measure?</p>
+        </div>
+
+        <h3>Cause &amp; effect</h3>
+        <ul>
+          <li><dfn>Correlation</dfn> = a regular association between variables — it does <b>not</b> prove causation.</li>
+          <li><b>Independent variable</b> = the cause; <b>dependent variable</b> = the effect. Identify a <b>causal mechanism</b> and rule out <dfn>spurious correlations</dfn> using <b>controls</b>. Durkheim's suicide study is the model.</li>
+        </ul>
+
+        <h3>Methods — strengths &amp; weaknesses</h3>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>Method</th><th>Strengths</th><th>Weaknesses</th></tr></thead>
+            <tbody>
+              <tr><th>Ethnography / participant observation</th><td>Rich, in-depth, first-hand meaning</td><td>Small-scale; hard to generalise; "going native"; observer effects</td></tr>
+              <tr><th>Surveys</th><td>Efficient; quantifiable; comparable; wide reach</td><td>False "precision"; shallow responses; non-response &amp; representativeness</td></tr>
+              <tr><th>Experiments</th><td>Controlled test of a hypothesis</td><td>Rare in sociology; artificial; the <b>Hawthorne effect</b></td></tr>
+              <tr><th>Life histories</th><td>Deep biographical/temporal insight</td><td>Subjective; reliability questioned</td></tr>
+              <tr><th>Comparative-historical</th><td>Cross-society/time; uses primary &amp; secondary sources</td><td>Records may be patchy or biased</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><b>Sampling</b>: a <b>representative</b> sample of the population; <b>random sampling</b> gives all an equal chance (also convenience and snowball sampling). <b>Questionnaires</b>: standardized/fixed-choice (quantifiable, shallow) vs open-ended (rich, hard to compare); run a <b>pilot study</b> first. <b>Digital sociology</b> uses big data but its neutrality is challenged (dataveillance). <dfn>Triangulation</dfn> (Denzin) mixes methods to cross-check.</p>
+
+        <div class="callout classic">
+          <div class="clabel">Classic study 2.1 — Zimbardo, Stanford Prison Experiment (1971)</div>
+          <p>24 male student volunteers randomly assigned guard/prisoner roles in a mock prison; "guards" turned abusive, "prisoners" apathetic; the study was stopped after 6 of a planned 14 days. Conclusion: behaviour was driven by the <b>situation and roles</b>, not individual dispositions ("bad barrel, not bad apple"). Criticised for serious ethical problems and artificiality; echoes in Abu Ghraib and Bauman's <em>Modernity and the Holocaust</em>.</p>
+        </div>
+        <div class="callout classic">
+          <div class="clabel">Classic study 2.2 — Skocpol, <em>States and Social Revolutions</em> (1979)</div>
+          <p>Comparative-historical analysis of the French (1789), Russian (1917) and Chinese (1949) revolutions. Argues revolutions "are not made, they come" — the unintended result of a <b>breakdown of state structures</b> under external pressure in agrarian societies (a structural, state-centred account, against the Marxist mass-agency view). Uses Mill's <b>method of similarity</b>; critics say it leaves little room for agency.</p>
+        </div>
+
+        <div class="defs">
+          <div><dt>Reliability</dt><dd>Whether a method yields the same result when repeated (consistency).</dd></div>
+          <div><dt>Validity</dt><dd>Whether a study actually measures what it claims to measure.</dd></div>
+          <div><dt>Falsificationism</dt><dd>Popper: science progresses by attempts to refute theories; scientific claims must be falsifiable.</dd></div>
+          <div><dt>Paradigm</dt><dd>Kuhn: the shared framework of "normal science," overturned in scientific revolutions.</dd></div>
+          <div><dt>Correlation vs causation</dt><dd>A regular association between variables is not proof that one causes the other.</dd></div>
+          <div><dt>Spurious correlation</dt><dd>An association produced by a third variable, not by a real causal link.</dd></div>
+          <div><dt>Hawthorne effect</dt><dd>People change their behaviour because they know they are being studied.</dd></div>
+          <div><dt>Triangulation</dt><dd>Denzin: combining methods/data/investigators/theories to cross-check findings.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>The <b>seven-stage research process</b>; <b>reliability vs validity</b>.</li>
+            <li><b>Correlation vs causation</b>; independent/dependent variables; controls; spurious correlation.</li>
+            <li>Strengths &amp; weaknesses of each method (esp. <b>ethnography vs survey</b>).</li>
+            <li>Research ethics via <b>Humphreys</b>; is sociology a science? (Popper &amp; Kuhn).</li>
+            <li>The two classic studies — <b>Zimbardo</b> (situation vs disposition) and <b>Skocpol</b> (structural theory of revolution).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · MODULE 3 — MARX, WEBER, DURKHEIM
+    ============================================================ -->
+    <section class="section" id="m3" data-num="04" data-title="Marx, Weber & Durkheim">
+      <div class="section-head">
+        <div class="section-index">04</div>
+        <div class="htext">
+          <h2>Marx, Weber &amp; Durkheim</h2>
+          <div class="source">Module 3 · <b>Alienation, Weber &amp; Solidarity readings</b></div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <h3>Marx — alienation</h3>
+        <p>Marx critiques <b>capitalism specifically, not industrialism</b>. Humans are defined not by consciousness but by the fact that they <b>produce their own means of subsistence</b> — work is what constitutes our humanity. Producing objects (<dfn>objectification</dfn>) is natural; under capitalism it degrades into <dfn>alienation</dfn>, where "man's own deed becomes an alien power opposed to him." The concept is adapted from <b>Hegel</b>, but where Hegel's alienation is metaphysical (Spirit projecting itself), Marx roots it in <b>historical</b> conditions — it is at once a historical, moral and sociological critique. Even capitalists are alienated (unconsciously), since production serves <b>profit</b>, not human need.</p>
+
+        <div class="callout key">
+          <div class="clabel">The four dimensions of alienation (Munshi 1979)</div>
+          <p><b>1. From producing activity</b> — labour is external and coerced; the division of labour and repetitive tasks "mortify the body and ruin the mind." <b>2. From the product</b> — the product stands outside the worker as a power confronting him. <b>3. From other people</b> — the product belongs to another, who becomes its master. <b>4. From species-being</b> — estranged labour tears man from his species-life, so one man is estranged from another.</p>
+        </div>
+        <p><b>From alienation to exploitation:</b> following <b>Ricardo</b>, exchange value is set by the quantity of labour needed to produce a commodity. The key move is the distinction between <dfn>labour power</dfn> (the capacity to work, which the worker sells) and <b>labour</b> (its use in production) — the gap between them is the source of surplus.</p>
+
+        <h3>Durkheim — solidarity &amp; the division of labour</h3>
+        <p>Against assumptions that modern solidarity was disintegrating, Durkheim argues it is being <b>reconstructed</b>: the division of labour frees people from isolation and makes them mutually dependent.</p>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th></th><th>Mechanical solidarity</th><th>Organic solidarity</th></tr></thead>
+            <tbody>
+              <tr><th>Society</th><td>Small-scale, pre-industrial</td><td>Modern, industrial</td></tr>
+              <tr><th>Division of labour</th><td>Simple (age &amp; sex)</td><td>Complex, specialised</td></tr>
+              <tr><th>Basis of solidarity</th><td>Likeness / uniformity</td><td>Difference / interdependence</td></tr>
+              <tr><th>Typical law</th><td>Repressive (punishment)</td><td>Restitutive (restoration)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><b>Abnormal forms:</b> <dfn>anomie</dfn> is the <b>meaninglessness of work</b> — a <b>transient</b> phase between the collapse of mechanical and the creation of organic solidarity; the <dfn>forced division of labour</dfn> occurs when social inequalities fail to mirror natural ones (Durkheim is a meritocrat who opposes inherited privilege).</p>
+
+        <h3>Weber — action, rationality &amp; the Protestant ethic</h3>
+        <p>Action is <b>social</b> when the actor attaches <b>subjective meaning</b> to it and orients it to others; sociology is the <b>comprehensive science of social action</b>, grasped through <dfn>Verstehen</dfn> (interpretive empathy). Weber's <b>four types of social action</b>:</p>
+        <ul>
+          <li><b>Zweckrational</b> (instrumental-rational) — means efficiently combined for a goal (engineer building a bridge).</li>
+          <li><b>Wertrational</b> (value-rational) — faithful to a value/honour (a captain going down with the ship).</li>
+          <li><b>Affective</b> — driven by emotion (a mother slapping a child).</li>
+          <li><b>Traditional</b> — driven by habit/custom (greeting with folded hands).</li>
+        </ul>
+        <p><dfn>Rationalization</dfn> is the master-trend of modernity: formal rationality and the <b>iron cage</b>, trading enchantment for predictability (<b>disenchantment</b>). The <dfn>ideal type</dfn> is a mental construct — "neither general nor average" — that helps analyse and compare social reality without subjective bias.</p>
+        <div class="callout classic">
+          <div class="clabel">The Protestant Ethic thesis</div>
+          <p>Weber asks how religion shapes economic life. <b>Calvinist predestination</b> — salvation fixed and unknowable — generates <b>salvation anxiety</b>. The response is <b>this-worldly asceticism</b>: disciplined hard work as a calling, frugality, and the <b>reinvestment (not consumption) of profit</b>. This "elective affinity" supplied the spirit of modern rational capitalism. The unique combination — not any single element — is what mattered.</p>
+        </div>
+
+        <div class="defs">
+          <div><dt>Objectification vs alienation</dt><dd>Producing objects is natural human activity; under capitalism it becomes alienation, where the product dominates its maker.</dd></div>
+          <div><dt>Species-being</dt><dd>Marx: humanity's essence as free, conscious, productive life; estranged labour severs us from it.</dd></div>
+          <div><dt>Labour power vs labour</dt><dd>The worker sells labour power (capacity to work); its use (labour) yields more value than the wage — the source of surplus.</dd></div>
+          <div><dt>Mechanical solidarity</dt><dd>Durkheim: cohesion through likeness in simple societies (repressive law).</dd></div>
+          <div><dt>Organic solidarity</dt><dd>Durkheim: cohesion through interdependence and specialisation in modern societies (restitutive law).</dd></div>
+          <div><dt>Anomie</dt><dd>Durkheim: the meaninglessness/normlessness of work, transient between the two solidarities.</dd></div>
+          <div><dt>Verstehen</dt><dd>Weber: interpretive understanding of the meanings behind social action.</dd></div>
+          <div><dt>Four types of social action</dt><dd>Zweckrational, Wertrational, affective, traditional.</dd></div>
+          <div><dt>Ideal type</dt><dd>Weber: a one-sided mental construct used to analyse and compare reality; "neither ideal nor typical."</dd></div>
+          <div><dt>This-worldly asceticism</dt><dd>Disciplined, frugal work-as-calling that drives the reinvestment of profit — the Protestant spirit of capitalism.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Name and explain Marx's <b>four dimensions of alienation</b>; objectification vs alienation; labour vs labour power.</li>
+            <li>Durkheim: <b>mechanical vs organic solidarity</b> (likeness vs difference); anomie as transient; repressive vs restitutive law.</li>
+            <li>Weber: the <b>four types of social action</b> with examples; Verstehen; rationalization / iron cage / disenchantment; the ideal type.</li>
+            <li>The <b>Protestant Ethic</b> chain: predestination → anxiety → asceticism → reinvestment → spirit of capitalism.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05 · GRINT CH 3 — CLASSICAL APPROACHES TO WORK
+    ============================================================ -->
+    <section class="section" id="grint" data-num="05" data-title="Classical Approaches to Work (Grint 3)">
+      <div class="section-head">
+        <div class="section-index">05</div>
+        <div class="htext">
+          <h2>Classical Approaches to Work</h2>
+          <div class="source">Grint, <em>The Sociology of Work</em> · <b>Chapter 3</b> (pp. 85–108)</div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <h3>The chapter's argument — the "triangle"</h3>
+        <p>Grint reads Marx, Weber and Durkheim — the classical <b>"gang of three"</b> — as the <b>flawed but indispensable foundation stones</b> of the sociology of work. None alone, nor all three together, gives a coherent account of work; each is <b>gender-blind/patriarchal</b>. They sit at the corners of a triangle:</p>
+        <div class="thinkers">
+          <div class="thinker marx"><div class="avatar">M</div><h4>Marx</h4><div class="years">fragmentation &amp; conflict</div><ul><li>Structural argument</li><li>Revolutionary against capitalism</li></ul></div>
+          <div class="thinker durkheim"><div class="avatar">D</div><h4>Durkheim</h4><div class="years">solidarity &amp; integration</div><ul><li>Structural (more rigid than Marx)</li><li>Social democrat / reformer</li></ul></div>
+          <div class="thinker weber"><div class="avatar">W</div><h4>Weber</h4><div class="years">rationality &amp; bureaucracy</div><ul><li><b>Individualist / interpretivist</b></li><li>Conservative liberal</li></ul></div>
+        </div>
+        <p><b>Marx &amp; Durkheim</b> are structuralists; <b>Weber</b> is a <dfn>methodological individualist</dfn> — collectivities reduce to individuals, with no "group mind." Grint's verdict: dependency does not by itself generate solidarity (vs Durkheim); Marx's class-lens <b>over-explains</b> everything; Weber's account is <b>over-rationalized</b>. "We go beyond them <em>because of</em> them, not in spite of them."</p>
+
+        <h3>Marx — the capitalist labour process</h3>
+        <ul>
+          <li>Same core as Module 3: <b>alienation</b> (four facets), the shift to <b>exploitation</b>, and <b>labour vs labour power</b>. Surplus is extracted invisibly in the <b>"hidden abode of production."</b></li>
+          <li>Three stages of production (Berg/Friedman): <dfn>co-operation → manufacture → machinofacture</dfn> — from "formal" to <b>"real subordination of labour,"</b> ending with workers as "appendages of machines" (deskilling; a wage hierarchy; the industrial reserve army).</li>
+          <li><b>Early vs late Marx:</b> the late Marx (<em>Capital</em> vol. 3) locates freedom <b>beyond</b> the sphere of material production — labour remains the "sphere of necessity" even under communism.</li>
+          <li>Class = shared relation to the <b>means of production</b> (not income); <b>class in itself vs class for itself</b>: "it is not the consciousness of men that determines their being, but their social being that determines their consciousness."</li>
+        </ul>
+
+        <h3>Durkheim — solidarity, anomie &amp; corporations</h3>
+        <ul>
+          <li>Against <b>Tönnies</b> (Gemeinschaft→Gesellschaft as decline) and <b>Spencer's</b> laissez-faire: only collective solidarity and morality can ground freedom, and the key lies <b>within</b> the division of labour.</li>
+          <li><b>Anomic</b> division of labour = transient meaninglessness (worsened by deskilling); the remedy is <dfn>corporations</dfn> (occupational associations) providing institutionalised dispute resolution. <b>Forced</b> division of labour = inequalities that don't mirror natural ones.</li>
+          <li>A <b>meritocrat</b>, not an egalitarian, favouring the abolition of inherited privilege: "evolution not revolution; regulation not anarchy." His target was industrialism's excesses, not capitalism itself.</li>
+        </ul>
+
+        <h3>Weber — class–status–party, bureaucracy &amp; rationalization</h3>
+        <ul>
+          <li><dfn>Class–status–party</dfn>: Marx wrongly assumed the three are coterminous; for Weber they are only contingently related, which is why proletarian revolution is unlikely. <b>Class</b> = shared life-chances in the market; <b>status</b> = social honour and lifestyle (reproduced by exclusionary closure); <b>party</b> = organised pursuit of power across class/status lines.</li>
+          <li><b>Verstehen</b> and the <b>ideal type</b> (a heuristic "one-sided exaggeration," neither ideal nor typical).</li>
+          <li><dfn>Bureaucracy</dfn> — "legal" (rule-bound) and "rational" (expert, calculable). Six principles: an abstract legal code; spheres of competence in a hierarchy of offices; non-ownership of offices; selection/promotion by qualification; fixed salaries; pensions and security of tenure. Grint's caution: bureaucracy brings problems of control (red tape, "working to rule"), not just power.</li>
+          <li><b>Protestant Ethic</b>: rational capitalism (vs "booty" and "pariah" capitalism) linked to Calvinism; ironically its success eventually <b>undermines</b> the religion that produced it. Whether Calvinism was causal or an <b>"elective affinity"</b> remains contested (Parkin).</li>
+        </ul>
+
+        <div class="callout">
+          <div class="clabel">Grint's overriding critique</div>
+          <p>All three ignore what matters most to contemporary work — <b>gender, ethnicity, the employment–domestic link, and the social shaping of technology</b>. They are classics to <b>adapt critically</b>, not to admire uncritically.</p>
+        </div>
+
+        <div class="defs">
+          <div><dt>The "gang of three"</dt><dd>Grint: Marx, Weber, Durkheim as flawed but indispensable foundation stones of the sociology of work.</dd></div>
+          <div><dt>Methodological individualism</dt><dd>Weber's premise that all collectivities are reducible to acting individuals — no "group mind."</dd></div>
+          <div><dt>Co-operation → manufacture → machinofacture</dt><dd>Marx's three stages of the labour process, ending in the "real subordination of labour."</dd></div>
+          <div><dt>Real vs formal subordination of labour</dt><dd>Formal: capital directs existing labour; real: machinery dissolves workers' remaining control.</dd></div>
+          <div><dt>Class in itself vs for itself</dt><dd>An objective class position vs a class conscious of, and organised around, its shared interests.</dd></div>
+          <div><dt>Corporations (Durkheim)</dt><dd>Occupational associations mediating between individual and state to counter anomie.</dd></div>
+          <div><dt>Class, status, party</dt><dd>Weber's three contingently-related dimensions of stratification (economic, honour, power).</dd></div>
+          <div><dt>Bureaucracy (six principles)</dt><dd>Weber's legal-rational administration: legal code, hierarchy of competence, non-ownership of office, merit selection, fixed salary, tenure.</dd></div>
+          <div><dt>Elective affinity</dt><dd>A mutual attraction between the Protestant ethic and capitalism — short of strict causation.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>The <b>triangle</b>: Durkheim (integration) / Marx (conflict) / Weber (rationality); structuralists vs individualist.</li>
+            <li>Marx: co-operation→manufacture→machinofacture; early vs late Marx on freedom.</li>
+            <li>Durkheim: anomic vs forced division of labour; corporations; meritocrat, not egalitarian.</li>
+            <li>Weber: class–status–party (contra Marx); six principles of bureaucracy; ideal type; elective affinity caveat.</li>
+            <li>The critical frame: all three are <b>gender-blind foundation stones</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06 · THE IPHONE & THE RATE OF EXPLOITATION
+    ============================================================ -->
+    <section class="section" id="iphone" data-num="06" data-title="The iPhone & the Rate of Exploitation">
+      <div class="section-head">
+        <div class="section-index">06</div>
+        <div class="htext">
+          <h2>The iPhone &amp; the Rate of Exploitation</h2>
+          <div class="source">Module 3 · Tricontinental, <em>The Rate of Exploitation: The Case of the iPhone</em></div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <p>A working application of Marx's labour theory of value: the notebook shows that today's iPhone workers are exploited at a rate roughly <b>25× higher</b> than 19th-century English textile workers — so the answer is not just higher wages but the <b>abolition of the wage system</b> (Marx called "a fair day's wage" a "conservative motto").</p>
+
+        <h3>The building blocks (Marx, <em>Capital</em>)</h3>
+        <ul>
+          <li>A <b>commodity</b> has <b>use value</b> (utility) and <b>value</b>, expressed as <b>exchange value</b> (price).</li>
+          <li>Total value = <dfn>constant capital (c)</dfn> + <dfn>variable capital (v)</dfn> + <dfn>surplus value (s)</dfn>.
+            <ul>
+              <li><b>c</b> = raw materials, machines, energy — "dead labour" transferred unchanged.</li>
+              <li><b>v</b> = investment in <b>labour power</b> (wages) — the only input that <b>creates new value</b>.</li>
+              <li><b>s</b> = value created beyond wages (surplus labour time beyond necessary labour time).</li>
+            </ul>
+          </li>
+          <li><dfn>Rate of exploitation</dfn> = rate of surplus value = <b>s / v</b>.</li>
+        </ul>
+
+        <div class="callout key">
+          <div class="clabel">The headline calculation — iPhone X</div>
+          <p>Total value ≈ sale price = <b>$999</b>. Constant capital <b>c = $370.89</b>; variable capital <b>v = $24.55</b>; so surplus value <b>s = 999 − (370.89 + 24.55) = $603.56</b>.<br>
+          <b>Rate of exploitation = s/v = 603.56 / 24.55 ≈ 2458%</b> — about <b>25×</b> the ~153% Marx found for 1860s English textile workers. (An iPhone-4 cross-check gives ≈ 2273%.)</p>
+        </div>
+
+        <h3>Why production moved to the Global South</h3>
+        <p>Apple "rarely produces anything beyond the brand," yet controls a <dfn>Global Commodity Chain</dfn> of <b>disarticulated production</b> across 30+ countries. Three <b>technological</b> shifts (telecom networks, computerisation, containerised logistics/ISO standards) and three <b>political</b> shifts of the 1980s (collapse of the USSR, the Third-World debt crisis and China's opening, and neoliberalism detaching Triad states from citizens' needs) enabled the move to cheap, unregulated labour — e.g. <b>Foxconn</b>, ~1.3 million workers in China ("Foxconn suicides").</p>
+        <p><b>Intellectual property</b> is criticised as mere <b>rent</b> — a legal entitlement, not a productive input — especially as core iPhone technologies (internet, GPS, touchscreen, Siri) were publicly funded.</p>
+
+        <div class="defs">
+          <div><dt>Constant capital (c)</dt><dd>Value of raw materials, machines and energy — "dead labour" transferred unchanged into the product.</dd></div>
+          <div><dt>Variable capital (v)</dt><dd>The capitalist's outlay on labour power (wages) — the only input that creates new value.</dd></div>
+          <div><dt>Surplus value (s)</dt><dd>Value workers create beyond their wages; the source of profit.</dd></div>
+          <div><dt>Rate of exploitation</dt><dd>s ÷ v — the rate of surplus value; ≈ 2458% for the iPhone X.</dd></div>
+          <div><dt>Necessary vs surplus labour time</dt><dd>The part of the day that covers the wage vs the part that produces surplus for the capitalist.</dd></div>
+          <div><dt>Global Commodity Chain</dt><dd>Production broken up among many firms and territories ("disarticulated production"), coordinated for just-in-time output.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define <b>rate of exploitation = s/v</b> and reproduce the iPhone X figures ($999 = c 370.89 + v 24.55 + s 603.56 → 2458%).</li>
+            <li>Why <b>only variable capital (labour power)</b> creates surplus value.</li>
+            <li>The <b>Global Commodity Chain</b> and why production moved to the Global South (three technological + three political changes).</li>
+            <li>Why "a fair day's wage" is inadequate → <b>abolition of the wage system</b>; IP as rent.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         07 · MODULE 4 — SOCIAL REPRODUCTION
+    ============================================================ -->
+    <section class="section" id="m4" data-num="07" data-title="Social Reproduction">
+      <div class="section-head">
+        <div class="section-index">07</div>
+        <div class="htext">
+          <h2>Social Reproduction</h2>
+          <div class="source">Module 4 · <b>SRT lecture &amp; Mezzadri</b>, "On the value of social reproduction"</div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <h3>What is social reproduction?</h3>
+        <p><dfn>Social reproduction</dfn> = the processes through which labour is regenerated <b>daily and inter-generationally</b>, through private and public institutions. It is broader than "care": it reproduces both <b>life</b> and <b>capitalist relations</b> at once — both <b>labourers</b> (living people) and <b>labour power</b> (the commodity). <dfn>Social Reproduction Theory (SRT)</dfn> analyses the "circuits of care" that reproduce the worker, and insists on a <dfn>unitary theory</dfn> — patriarchy and capitalism as <b>one system</b>, not two (against "dual" theories).</p>
+
+        <h3>The early debate &amp; housewifisation</h3>
+        <p>Beginning with <b>Dalla Costa &amp; James</b>, <em>The Power of Women and the Subversion of the Community</em> (1972), feminists produced a robust critique of Marxian views that located value <b>only</b> in the productive sphere and treated "productive" and "paid" as synonyms. Capitalism, they argued, depends first on the <b>biological and social regeneration of the worker</b>, mostly <b>outside</b> classic production.</p>
+        <div class="callout key">
+          <div class="clabel">Housewifisation (Maria Mies)</div>
+          <p>A process by which women's labour <b>blurs the sources of value</b> — (a) <b>hiding</b> women's productive contribution to the market and (b) <b>devaluing</b> it as non-value-producing. In Mies' <em>Lacemakers of Narsapur</em> it is a capitalist–patriarchal <b>and imperial</b> arrangement.</p>
+        </div>
+        <ul>
+          <li><b>Fortunati</b> — reproductive work is socially constructed as "non-value"; its non-valorisation is a self-fulfilling prophecy.</li>
+          <li><b>Federici</b> (<em>Caliban and the Witch</em>) — primitive accumulation as gendered, colonial dispossession (the witch-hunts).</li>
+          <li><b>Picchio</b> — classical political economy (Smith, Ricardo, Marx) treated the value of labour as <b>exogenous</b>, conflating its <b>value</b> with its <b>cost (the wage)</b>.</li>
+        </ul>
+
+        <h3>The value debate</h3>
+        <p>Does social reproduction produce <b>value</b>? The orthodox/productivist view says value is created only in commodity production. <b>Paul Smith</b> used the use-value/exchange-value distinction to argue reproductive work can never be social labour. <b>Mezzadri's rebuttal:</b> this is <b>"merely tautological"</b> — it <em>assumes</em> rather than <em>demonstrates</em> that reproduction is non-value-producing, and fetishises the <b>wage as the value of labour</b> rather than its cost.</p>
+
+        <div class="callout classic">
+          <div class="clabel">Mezzadri's thesis — three value-channels</div>
+          <p>Only reading social reproduction <b>as value-producing</b> can explain labour in the informal <b>majority world</b>. Reproduction directly generates value through: <b>1)</b> deepening labour control beyond work-time (the <b>dormitory labour regime</b>, Pun Ngai &amp; Smith); <b>2)</b> absorbing the <b>externalisation of reproduction costs</b> — unpaid (mostly women's) work as a <b>systematic subsidy to capital</b>; and <b>3)</b> the expansion of <b>formal subsumption</b> via fragmented, home-based labour (the putting-out system), where work and life times are conflated.</p>
+        </div>
+
+        <h3>West vs "the Rest"</h3>
+        <p>Most SRT studies the West, focusing on the "architecture of care" and a neoliberal <b>"crisis of care."</b> But in the <b>majority world</b>, social reproduction and care are <b>not synonyms</b>: informality dominates (ILO: ~85.8% Africa, ~71.4% Asia-Pacific; ~61% worldwide), so any value theory that neatly separates value-producing from non-value-producing activity is inaccurate. Mezzadri's political conclusion: theoretical distinctions are always political, and a <b>politics of inclusion</b> requires <b>inclusive theories and categories</b> first (Harriss-White &amp; Gooptu: the wageless wage "struggles over class," not just "class struggle").</p>
+
+        <div class="defs">
+          <div><dt>Social reproduction</dt><dd>The daily and inter-generational regeneration of labour and labour power through private/public institutions.</dd></div>
+          <div><dt>Social Reproduction Theory (SRT)</dt><dd>Analyses the circuits of care reproducing the worker, seeking a unitary theory of capitalism and patriarchy.</dd></div>
+          <div><dt>Unitary vs dual theory</dt><dd>Treating capitalism and patriarchy as one system vs as two autonomous systems.</dd></div>
+          <div><dt>Housewifisation (Mies)</dt><dd>Hiding and devaluing women's productive labour as "non-value" — a capitalist, patriarchal and imperial process.</dd></div>
+          <div><dt>Externalisation of reproduction costs</dt><dd>Dumping the cost of reproducing labour onto workers/families — a systematic subsidy to capital.</dd></div>
+          <div><dt>Formal subsumption</dt><dd>Bringing existing (e.g. home-based) labour under capital's laws of value without transforming its technical basis.</dd></div>
+          <div><dt>Dormitory labour regime</dt><dd>Pun Ngai &amp; Smith: employer control extended beyond the workplace into workers' living/reproductive time.</dd></div>
+          <div><dt>Majority world / informality</dt><dd>The predominantly informal labour of the Global South, where production and reproduction times are conflated.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define social reproduction and distinguish it from care; production vs reproduction of labour power.</li>
+            <li><b>Housewifisation</b> — the two-part definition and its imperial dimension.</li>
+            <li>The value debate: Paul Smith vs Mezzadri's <b>"tautological"</b> charge.</li>
+            <li>Mezzadri's <b>three channels</b> by which reproduction produces value; West vs "the Rest."</li>
+            <li>Unitary vs dual theory (Vogel, Bhattacharya); the <b>politics of inclusion</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         08 · MODULE 5 / GIDDENS 9 — STRATIFICATION & SOCIAL CLASS
+    ============================================================ -->
+    <section class="section" id="m5" data-num="08" data-title="Stratification & Social Class">
+      <div class="section-head">
+        <div class="section-index">08</div>
+        <div class="htext">
+          <h2>Stratification &amp; Social Class</h2>
+          <div class="source">Module 5 <span style="color:var(--gold)">· ongoing</span> · built on Giddens, <em>Sociology</em> (9th ed.) <b>Chapter 9</b></div>
+        </div>
+        <label class="revise-toggle" title="Mark as revised">
+          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
+        </label>
+      </div>
+
+      <div class="prose">
+        <div class="callout">
+          <div class="clabel">Note on this module</div>
+          <p>Module 5 is <b>still ongoing</b> with a few classes left before the midsem, and its folder had no readings yet. This section is built from <b>Giddens Chapter 9</b> — the assigned "Stratification and Social Class" chapter that the module tracks. Add your lecture-specific notes here as they come.</p>
+        </div>
+
+        <h3>Systems of stratification</h3>
+        <p><dfn>Social stratification</dfn> = structured inequalities between groups in access to rewards (like geological "strata"). Rankings apply to categories of people, life chances follow the category, and ranks change only slowly. Four historical systems:</p>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>System</th><th>Basis</th><th>Mobility</th></tr></thead>
+            <tbody>
+              <tr><th>Slavery</th><td>Some people owned by others</td><td>None; today illegal but ~40m in "modern slavery" (ILO)</td></tr>
+              <tr><th>Caste</th><td>Status ascribed at birth; maintained by <b>endogamy</b></td><td>None (e.g. varna + Dalits; apartheid abolished 1992)</td></tr>
+              <tr><th>Estates</th><td>Feudal strata with legally defined rights</td><td>Limited</td></tr>
+              <tr><th>Class</th><td>Economic; largely <b>achieved</b>, fluid, impersonal</td><td>Open — the distinctive modern system</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Theorising class</h3>
+        <ul>
+          <li><b>Marx</b> — class = relationship to the <b>means of production</b>; owners vs proletariat; <b>exploitation</b> (surplus value), pauperization, alienation, class consciousness → revolution. Critique: society did not split into two camps; revolution didn't come in advanced societies.</li>
+          <li><b>Weber</b> — <b>class, status &amp; party</b>: class = market position (including skills/credentials); <b>status</b> = social honour expressed in lifestyle (can vary independently — "genteel poverty"); <b>party</b> = organised power. Also <dfn>social closure</dfn> — groups (e.g. professions) restrict entry to protect rewards.</li>
+          <li><b>Erik Olin Wright</b> — bridges Marx &amp; Weber via three dimensions of control over economic resources; <dfn>contradictory class locations</dfn> (e.g. managers, both exploiters and exploited).</li>
+          <li><dfn>Intersectionality</dfn> (Crenshaw, Patricia Hill Collins) — class must be read together with gender, race, sexuality and disability; class is losing its status as the "master category."</li>
+        </ul>
+
+        <h3>Mapping &amp; dividing the class structure</h3>
+        <ul>
+          <li>Class is <b>operationalized</b> via <b>occupation</b>. The <b>Goldthorpe / EGP schema</b> (neo-Weberian, based on employment relations) feeds the UK ONS-SEC — service / intermediate / working classes. Critique (Westergaard): it ignores the wealth of the super-rich.</li>
+          <li><b>Upper class</b> (~top 1%) — concentrated wealth and power (John Scott: executives, entrepreneurs, finance capitalists). <b>Middle class(es)</b> — now the majority; sell mental and physical labour; use social closure. <b>Working class</b> — shrunk from ~40% (1960s) to ~15%.</li>
+          <li><dfn>Embourgeoisement thesis</dfn> (affluent workers become middle class) was tested and <b>rejected</b> by Goldthorpe et al.'s <b>Affluent Worker</b> study (Luton): workers were <b>instrumental</b> and home-centred, not middle-class in values.</li>
+          <li><dfn>Underclass</dfn> debate — <b>Charles Murray</b> (a welfare-created "dependency culture") vs <b>W.J. Wilson</b> (structural causes: deindustrialisation) and <b>Lydia Morris</b> (no distinct anti-work culture). Europe prefers <b>"social exclusion."</b></li>
+          <li>The <b>cultural turn</b> — Beck's "zombie category"; <b>Bourdieu's</b> four <dfn>capitals</dfn> (economic, cultural, social, symbolic) reproduce class through taste and lifestyle (cf. the BBC Great British Class Survey: an <b>elite</b> and a <b>precariat</b>).</li>
+        </ul>
+
+        <h3>Social mobility &amp; meritocracy</h3>
+        <ul>
+          <li><dfn>Social mobility</dfn> — movement between positions: <b>vertical</b> vs lateral; <b>intragenerational</b> (within a career) vs <b>intergenerational</b> (across generations); <b>absolute</b> vs <b>relative</b>.</li>
+          <li>Studies: Blau &amp; Duncan (much short-range mobility, driven by <b>structural change</b>); Glass (UK not very open); the Oxford Mobility Study (more absolute mobility, but relative chances stay unequal — "more room at the top"); Blanden et al. &amp; Jackson &amp; Goldthorpe (mobility has <b>fallen/stagnated</b>).</li>
+          <li><b>Meritocracy</b> debate: <b>Saunders</b> (Britain largely meritocratic) vs <b>Breen &amp; Goldthorpe</b> (strong class barriers — the disadvantaged need more merit to reach the same place). <dfn>Glass floor / sticky ceiling</dfn>: advantaged families "hoard" opportunities. Conclusion: class remains at the heart of unequal life chances.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Social stratification</dt><dd>Structured, slowly-changing inequalities between categories of people in access to rewards and life chances.</dd></div>
+          <div><dt>Caste &amp; endogamy</dt><dd>Status ascribed at birth and fixed, maintained by marriage within the group.</dd></div>
+          <div><dt>Class, status, party (Weber)</dt><dd>Market position, social honour/lifestyle, and organised power — overlapping dimensions of stratification.</dd></div>
+          <div><dt>Social closure</dt><dd>Weber: groups restricting entry (e.g. professions) to protect their rewards.</dd></div>
+          <div><dt>Contradictory class locations</dt><dd>Wright: positions (e.g. managers) that are simultaneously exploiting and exploited.</dd></div>
+          <div><dt>Intersectionality</dt><dd>Crenshaw/Collins: class, gender, race and other axes are mutually constitutive.</dd></div>
+          <div><dt>EGP / Goldthorpe schema</dt><dd>A neo-Weberian class scheme based on employment relations; underlies the ONS-SEC.</dd></div>
+          <div><dt>Embourgeoisement thesis</dt><dd>Claim that affluent workers become middle class — rejected by the Affluent Worker study.</dd></div>
+          <div><dt>Underclass / social exclusion</dt><dd>A group "beneath" the class structure — cultural (Murray) vs structural (Wilson) explanations.</dd></div>
+          <div><dt>Bourdieu's capitals</dt><dd>Economic, cultural, social and symbolic capital, whose distribution reproduces class through taste.</dd></div>
+          <div><dt>Absolute vs relative mobility</dt><dd>Total movement between positions vs the comparative chances of different origins reaching them.</dd></div>
+          <div><dt>Glass floor / ceiling</dt><dd>Advantaged families preventing downward mobility; barriers keeping women/disadvantaged from the top.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define stratification; compare the <b>four systems</b> and what makes class distinctive.</li>
+            <li><b>Marx vs Weber</b> on class, plus Wright (contradictory locations) and intersectionality.</li>
+            <li>The <b>EGP/Goldthorpe</b> schema and operationalising class by occupation.</li>
+            <li><b>Embourgeoisement</b> &amp; the Affluent Worker study; the <b>underclass</b> debate; Bourdieu's capitals.</li>
+            <li>Social mobility (absolute vs relative; falling mobility) and the <b>meritocracy</b> debate.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="no-results" id="no-results">No sections match your search. Try another term.</div>
+
+    <footer class="foot">
+      <p><b>Intro to Sociology — Midsem Study Guide.</b> Notes distilled from the assigned readings (Giddens 9th ed.; Grint; and course Modules 1, 3, 4 &amp; 5) for revision only. Always cross-check against your lectures.</p>
+      <p>Built as a plain HTML/CSS/JS site · progress &amp; theme are saved in your browser · © <span id="year"></span></p>
+    </footer>
+  </main>
+</div>
+
+<!-- Back to top -->
+<button class="totop" id="totop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- Flashcards launcher -->
+<button class="fab" id="fab" aria-label="Open flashcards">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M21 7v11a2 2 0 0 1-2 2H8"/></svg>
+  <span>Flashcards · <b id="fab-count">0</b></span>
+</button>
+
+<!-- Flashcards modal -->
+<div class="modal" id="fc-modal" role="dialog" aria-modal="true" aria-label="Flashcards">
+  <div class="modal-inner">
+    <div class="fc-top">
+      <span class="ftitle">Key-term flashcards</span>
+      <span class="fcount" id="fc-count">0 / 0</span>
+      <button class="fc-close" id="fc-close" aria-label="Close flashcards">✕</button>
+    </div>
+    <div class="flashcard" id="fc">
+      <div class="fc-face">
+        <div class="fc-front">
+          <span class="kicker" id="fc-topic"></span>
+          <span class="term-big" id="fc-term"></span>
+          <span class="hint">click / space to flip</span>
+        </div>
+        <div class="fc-back">
+          <span class="kicker" id="fc-topic-back"></span>
+          <span class="def" id="fc-def"></span>
+        </div>
+      </div>
+    </div>
+    <div class="fc-progress"><i id="fc-fill"></i></div>
+    <div class="fc-nav">
+      <button id="fc-prev">← Prev</button>
+      <button class="primary" id="fc-next">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>

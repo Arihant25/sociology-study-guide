@@ -65,6 +65,12 @@
 }
 
 * { box-sizing: border-box; }
+
+/* Base link color: theme-aware, never browser blue.
+   Specific components (.toc, .map-card, .brand) override below. */
+a { color: var(--rust-deep); text-decoration: none; }
+:root[data-theme="dark"] a { color: var(--rust); }
+
 html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
@@ -99,7 +105,7 @@ body {
   backdrop-filter: saturate(140%) blur(12px);
   border-bottom: 1px solid var(--line-soft);
 }
-.brand { display: flex; align-items: center; gap: 11px; font-family: var(--display); font-weight: 600; }
+.brand { display: flex; align-items: center; gap: 11px; font-family: var(--display); font-weight: 600; color: var(--ink); text-decoration: none; }
 .brand .glyph {
   width: 34px; height: 34px; flex: none; border-radius: 9px;
   display: grid; place-items: center; color: #fff; font-size: 18px;
@@ -307,7 +313,8 @@ body {
 .prose ul, .prose ol { margin: 0 0 16px; padding-left: 1.3em; }
 .prose li { margin: 5px 0; }
 .prose li::marker { color: var(--rust); }
-.prose a { color: var(--rust-deep); text-underline-offset: 3px; }
+.prose a, .foot a { text-decoration: underline; text-underline-offset: 3px; }
+.prose a { color: var(--rust-deep); }
 :root[data-theme="dark"] .prose a { color: var(--rust); }
 
 /* Key term */

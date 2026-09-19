@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sociology Midsem Guide</title>
@@ -6,6 +7,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script>
+  // Runs before first paint so the page never flashes the wrong theme.
+  document.documentElement.setAttribute("data-theme",
+    window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+</script>
 
 <div id="progress-bar"></div>
 
@@ -39,16 +45,23 @@
 <div class="shell" id="top">
   <!-- ===================== SIDEBAR ===================== -->
   <aside class="sidebar" id="sidebar">
-    <div class="side-title">Contents</div>
-    <ul class="toc" id="toc"></ul>
+    <div class="side-scroll">
+      <div class="side-title">Contents</div>
+      <ul class="toc" id="toc"></ul>
+    </div>
 
-    <div class="side-card">
-      <div class="ring-wrap">
-        <div class="ring" id="ring"><b id="ring-pct">0%</b></div>
-        <div class="lbl" id="ring-label"><b>0 / 8 revised</b>tick sections as you go</div>
+    <!-- Reading rail: a dot for each section, the fill shows how far down the page you are -->
+    <div class="scroll-rail">
+      <div class="rail-head">
+        <span>Reading position</span>
+        <span class="rail-pct" id="rail-pct">0%</span>
       </div>
-      <div class="mini-actions">
-        <button class="mini-btn" id="reset-progress">Reset progress</button>
+      <div class="rail" id="rail">
+        <div class="rail-fill" id="rail-fill"></div>
+      </div>
+      <div class="rail-foot">
+        <span class="rail-now" id="rail-now">Start</span>
+        <span class="rail-left" id="rail-left">100% left</span>
       </div>
     </div>
   </aside>
@@ -59,7 +72,7 @@
     <section class="hero">
       <div class="eyebrow">Intro to Sociology · Midterm Revision</div>
       <h1>The Sociological <em>Enterprise</em>, in one place.</h1>
-      <p class="lede">Everything you need for the midsem, written up simply from Giddens, Grint, and your own course modules on the founding thinkers, social reproduction, and stratification. Tick off each section as you revise it, open the flashcards to test key terms, and search the whole guide in one go.</p>
+      <p class="lede">Everything you need for the midsem, written up simply from Giddens, Grint, and your own course modules on the founding thinkers, social reproduction, and stratification. Open the flashcards to test key terms, and search the whole guide in one go.</p>
       <div class="hero-meta">
         <span class="pill"><span class="k"></span>Giddens · Ch 1, 2, 9</span>
         <span class="pill teal"><span class="k"></span>Grint · Ch 3</span>
@@ -88,9 +101,6 @@
           <h2>The Sociological Enterprise</h2>
           <div class="source">Module 1 · <b>Lectures 1 and 2, IGNOU Units 1 and 2, Berger</b></div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -177,9 +187,6 @@
           <h2>What is Sociology?</h2>
           <div class="source">Giddens, <em>Sociology</em> (9th ed.) · <b>Chapter 1</b></div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -273,9 +280,6 @@
           <h2>Asking and Answering Sociological Questions</h2>
           <div class="source">Giddens, <em>Sociology</em> (9th ed.) · <b>Chapter 2</b></div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -361,9 +365,6 @@
           <h2>Marx, Weber and Durkheim</h2>
           <div class="source">Module 3 · <b>Alienation, Weber and Solidarity readings</b></div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -440,9 +441,6 @@
           <h2>Classical Approaches to Work</h2>
           <div class="source">Grint, <em>The Sociology of Work</em> · <b>Chapter 3</b> (pp. 85-108)</div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -518,9 +516,6 @@
           <h2>The iPhone and the Rate of Exploitation</h2>
           <div class="source">Module 3 · Tricontinental, <em>The Rate of Exploitation, The Case of the iPhone</em></div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -580,9 +575,6 @@
           <h2>Social Reproduction</h2>
           <div class="source">Module 4 · <b>SRT lecture and Mezzadri</b>, On the value of social reproduction</div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -646,9 +638,6 @@
           <h2>Stratification and Social Class</h2>
           <div class="source">Module 5 <span style="color:var(--gold)">· ongoing</span> · built on Giddens, <em>Sociology</em> (9th ed.) <b>Chapter 9</b></div>
         </div>
-        <label class="revise-toggle" title="Mark as revised">
-          <input type="checkbox" class="revise"><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Revised
-        </label>
       </div>
 
       <div class="prose">
@@ -727,7 +716,7 @@
 
     <footer class="foot">
       <p><b>Intro to Sociology, Midsem Study Guide.</b> These notes are written up from the assigned readings, namely Giddens 9th ed., Grint, and course Modules 1, 3, 4 and 5, for revision only. Always check them against your own lectures.</p>
-      <p>Built as a plain HTML, CSS and JS site. Your progress and theme are saved in your own browser. © <span id="year"></span></p>
+      <p>Built as a plain HTML, CSS and JS site. It follows your system's light or dark setting. © <span id="year"></span></p>
     </footer>
   </main>
 </div>

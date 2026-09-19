@@ -7,23 +7,28 @@
   "use strict";
   const $  = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
-  const store = {
-    get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
-    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
-  };
 
-  /* ---------- Theme ---------- */
+  /* ---------- Theme ----------
+     The page opens in the system theme (already applied by the inline script
+     in the head). The toggle overrides it until the page is reloaded. */
   const root = document.documentElement;
-  const savedTheme = store.get("soc-theme", null);
-  if (savedTheme) root.setAttribute("data-theme", savedTheme);
-  else if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches)
-    root.setAttribute("data-theme", "dark");
+  const systemDark = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  let themeOverride = null;
+
+  function applyTheme() {
+    const dark = themeOverride === null ? !!(systemDark && systemDark.matches) : themeOverride;
+    root.setAttribute("data-theme", dark ? "dark" : "light");
+  }
+  applyTheme();
+  systemDark?.addEventListener?.("change", () => { if (themeOverride === null) applyTheme(); });
 
   $("#theme-toggle")?.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    store.set("soc-theme", next);
+    themeOverride = root.getAttribute("data-theme") !== "dark";
+    applyTheme();
   });
+
+  // A theme saved by an older version of this page would otherwise sit unused.
+  try { localStorage.removeItem("soc-theme"); localStorage.removeItem("soc-revised"); } catch {}
 
   /* ---------- Build TOC from sections ---------- */
   const sections = $$(".section");
@@ -34,47 +39,79 @@
     const li = document.createElement("li");
     li.innerHTML =
       `<a href="#${sec.id}" data-target="${sec.id}">` +
-      `<span class="num">${num}</span><span class="lbl">${title}</span>` +
-      `<span class="dot" title="Revised"></span></a>`;
+      `<span class="num">${num}</span><span class="lbl">${title}</span></a>`;
     toc.appendChild(li);
   });
   const tocLinks = $$("#toc a");
 
-  /* ---------- Revise progress (checkboxes + ring + toc dots) ---------- */
-  const revised = new Set(store.get("soc-revised", []));
-  const ring = $("#ring"), ringPct = $("#ring-pct");
+  /* ---------- Reading rail (dots for each section + how far is left) ---------- */
+  const rail = $("#rail"), railFill = $("#rail-fill"), railPct = $("#rail-pct"),
+        railNow = $("#rail-now"), railLeft = $("#rail-left");
+  const HEAD_OFFSET = 74;              // sticky top bar, matches the CSS
+  // The scrolling box is <html> normally and <body> in quirks mode.
+  const scroller = () => document.scrollingElement || document.documentElement;
+  const scrollMax = () => { const e = scroller(); return e.scrollHeight - e.clientHeight; };
+  let marks = [];
 
-  function refreshProgress() {
-    const total = sections.length || 1;
-    const done = sections.filter(s => revised.has(s.id)).length;
-    const pct = Math.round((done / total) * 100);
-    if (ring) ring.style.setProperty("--p", pct);
-    if (ringPct) ringPct.textContent = pct + "%";
-    const lbl = $("#ring-label");
-    if (lbl) lbl.innerHTML = `<b>${done} / ${total} revised</b>keep going — you've got this`;
-    tocLinks.forEach(a => a.classList.toggle("done", revised.has(a.dataset.target)));
+  function buildMarks() {
+    if (!rail) return;
+    marks = sections.map(sec => {
+      const title = sec.dataset.title || sec.id;
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "rail-mark";
+      b.title = (sec.dataset.num ? sec.dataset.num + " · " : "") + title;
+      b.setAttribute("aria-label", "Jump to " + title);
+      b.addEventListener("click", () => {
+        const top = sec.getBoundingClientRect().top + window.scrollY - HEAD_OFFSET;
+        window.scrollTo({ top, behavior: "smooth" });
+        if (innerWidth <= 920) closeNav();
+      });
+      rail.appendChild(b);
+      return { el: b, sec, pos: 0, top: 0 };
+    });
+    placeMarks();
   }
 
-  sections.forEach(sec => {
-    const cb = sec.querySelector('input[type="checkbox"].revise');
-    if (!cb) return;
-    cb.checked = revised.has(sec.id);
-    sec.classList.toggle("done", cb.checked);
-    cb.addEventListener("change", () => {
-      if (cb.checked) revised.add(sec.id); else revised.delete(sec.id);
-      sec.classList.toggle("done", cb.checked);
-      store.set("soc-revised", Array.from(revised));
-      refreshProgress();
+  function placeMarks() {
+    const max = scrollMax();
+    marks.forEach(m => {
+      const hidden = m.sec.classList.contains("search-hide");
+      m.el.hidden = hidden;
+      if (hidden) return;
+      m.top = m.sec.getBoundingClientRect().top + window.scrollY;
+      const start = m.top - HEAD_OFFSET;
+      m.pos = max > 0 ? Math.min(1, Math.max(0, start / max)) : 0;
+      m.el.style.left = (m.pos * 100) + "%";
     });
-  });
-  refreshProgress();
+  }
 
-  $("#reset-progress")?.addEventListener("click", () => {
-    revised.clear(); store.set("soc-revised", []);
-    sections.forEach(s => { s.classList.remove("done");
-      const cb = s.querySelector("input.revise"); if (cb) cb.checked = false; });
-    refreshProgress();
-  });
+  function updateRail(pct) {
+    if (!railFill) return;
+    railFill.style.width = pct + "%";
+    if (railPct) railPct.textContent = Math.round(pct) + "%";
+    if (railLeft) railLeft.textContent = Math.max(0, 100 - Math.round(pct)) + "% left";
+    const line = window.scrollY + innerHeight * 0.45;   // same reference as the scroll spy
+    let cur = -1;
+    marks.forEach((m, i) => { if (!m.el.hidden && m.top <= line) cur = i; });
+    marks.forEach((m, i) => {
+      m.el.classList.toggle("passed", i <= cur);
+      m.el.classList.toggle("current", i === cur);
+    });
+    if (railNow) railNow.textContent = cur >= 0
+      ? (marks[cur].sec.dataset.title || marks[cur].sec.id)
+      : "Start";
+  }
+
+  let reflowTimer;
+  function reflowRail() {
+    clearTimeout(reflowTimer);
+    reflowTimer = setTimeout(() => { placeMarks(); onScroll(); }, 90);
+  }
+  buildMarks();
+  addEventListener("resize", reflowRail);
+  addEventListener("load", reflowRail);
+  if (window.ResizeObserver) new ResizeObserver(reflowRail).observe(document.body);
 
   /* ---------- Scroll spy + reading progress bar ---------- */
   const bar = $("#progress-bar");
@@ -88,11 +125,12 @@
   sections.forEach(s => spy.observe(s));
 
   function onScroll() {
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    const max = scrollMax();
+    const y = window.scrollY;
+    const pct = max > 0 ? Math.min(100, (y / max) * 100) : 0;
     if (bar) bar.style.width = pct + "%";
-    $("#totop")?.classList.toggle("show", h.scrollTop > 600);
+    updateRail(pct);
+    $("#totop")?.classList.toggle("show", y > 600);
   }
   document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -134,6 +172,7 @@
     if (!q) {
       sections.forEach(s => s.classList.remove("search-hide"));
       noResults?.classList.remove("show");
+      reflowRail();
       return;
     }
     const safe = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -145,6 +184,7 @@
       if (hit) { visible++; highlight(s, re); }
     });
     noResults?.classList.toggle("show", visible === 0);
+    reflowRail();
   }
   search?.addEventListener("input", () => {
     clearTimeout(searchTimer);

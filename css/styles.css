@@ -358,6 +358,8 @@ body {
 /* Thinker cards */
 .thinkers { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
   gap: 14px; margin: 22px 0; max-width: none; }
+.thinkers.four { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 560px){ .thinkers.four { grid-template-columns: 1fr; } }
 .thinker {
   padding: 18px; border-radius: var(--radius); background: var(--card);
   border: 1px solid var(--line-soft); box-shadow: var(--shadow); position: relative;
@@ -366,6 +368,7 @@ body {
   width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
   font-family: var(--display); font-weight: 600; font-size: 1.2rem; color: #fff; margin-bottom: 10px;
 }
+.thinker.comte .avatar { background: var(--ink-soft); }
 .thinker.marx .avatar { background: var(--rust); }
 .thinker.weber .avatar { background: var(--teal); }
 .thinker.durkheim .avatar { background: var(--gold); }

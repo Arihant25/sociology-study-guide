@@ -509,3 +509,30 @@ mark.hit { background: var(--gold-tint); color: inherit; border-radius: 3px; pad
   .section { break-inside: avoid; border-top: 1px solid #ccc; }
   .prose { max-width: none; }
 }
+
+/* ---------- Exam paper review (section 09) ---------- */
+.qblock { margin: 20px 0; padding-top: 18px; border-top: 1px solid var(--line-soft); }
+.qblock:first-of-type { border-top: none; }
+.qhead { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; flex-wrap: wrap; }
+.qnum { font-family: var(--display); font-weight: 600; font-size: 1.15rem; color: var(--rust); }
+.qtext { font-size: 1.05rem; margin: 2px 0 10px; }
+.score { font-family: var(--sans); font-size: .76rem; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--ink-soft); background: var(--card); white-space: nowrap; }
+.score.full { color: #2f6b4f; border-color: #8fc6a8; background: color-mix(in srgb, #8fc6a8 22%, var(--card)); }
+.score.bad { color: var(--rust-deep); border-color: var(--rust); background: var(--rust-tint); }
+.score.part { color: var(--gold); border-color: var(--gold); background: var(--gold-tint); }
+:root[data-theme="dark"] .score.full { color: #8fd3ab; }
+
+.callout.miss { background: color-mix(in srgb, var(--rust-tint) 70%, var(--card)); border-color: var(--rust); }
+.callout.miss .clabel { color: var(--rust); }
+
+.akey b { color: var(--ink); }
+.yours { font-size: .98rem; color: var(--ink-soft); }
+
+details.passage { margin: 18px 0; border: 1px solid var(--line-soft); border-radius: var(--radius-sm); background: var(--card); box-shadow: var(--shadow); }
+details.passage > summary { cursor: pointer; padding: 13px 16px; font-family: var(--sans); font-weight: 600; font-size: .9rem; color: var(--rust); list-style: none; }
+details.passage > summary::-webkit-details-marker { display: none; }
+details.passage > summary::before { content: "\25B8  "; }
+details.passage[open] > summary::before { content: "\25BE  "; }
+details.passage .pbody { padding: 0 16px 14px; font-size: .97rem; color: var(--ink-soft); }
+details.passage .pbody p { margin: 0 0 10px; }

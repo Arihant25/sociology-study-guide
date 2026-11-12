@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sociology Endsem Guide</title>
+<meta name="description" content="A study guide for the Intro to Sociology endsem, covering Modules 6 to 9: work and the labour process, economic sociology, the sociology of culture, and digital sociology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  // Runs before first paint so the page never flashes the wrong theme.
+  document.documentElement.setAttribute("data-theme",
+    window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+</script>
+
+<div id="progress-bar"></div>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open contents">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a class="brand" href="index.html" title="Back to H1 / H2">
+    <span class="glyph">§</span>
+    <b>Sociology<span>Endsem Study Guide · H2</span></b>
+  </a>
+  <div class="spacer"></div>
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="search" type="search" placeholder="Search notes, thinkers, terms" aria-label="Search the study guide" autocomplete="off">
+    <kbd>/</kbd>
+  </div>
+  <button class="nav-fc" id="fab" aria-label="Open flashcards">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M21 7v11a2 2 0 0 1-2 2H8"/></svg>
+    <span>Flashcards <b id="fab-count">0</b></span>
+  </button>
+  <button class="icon-btn" id="theme-toggle" aria-label="Switch between light and dark">
+    <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</header>
+
+<div class="scrim" id="scrim"></div>
+
+<div class="shell" id="top">
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="side-scroll">
+      <div class="side-title">Contents</div>
+      <ul class="toc" id="toc"></ul>
+    </div>
+
+    <div class="scroll-rail">
+      <div class="rail-head">
+        <span>Reading position</span>
+        <span class="rail-pct" id="rail-pct">0%</span>
+      </div>
+      <div class="rail" id="rail">
+        <div class="rail-fill" id="rail-fill"></div>
+      </div>
+      <div class="rail-foot">
+        <span class="rail-now" id="rail-now">Start</span>
+        <span class="rail-left" id="rail-left">100% left</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="eyebrow">Intro to Sociology · Endsem Revision · Modules 6 to 9</div>
+      <h1>Work, markets, culture and the <em>digital</em>, in one place.</h1>
+      <p class="lede">The endsem portion, written up simply from the fourteen readings and the class slides the TAs listed. Each section gives the argument of one reading with its key terms, then the points most likely to be asked. Open the flashcards to test the terms, and search the whole guide in one go.</p>
+      <div class="hero-meta">
+        <span class="pill"><span class="k"></span>Module 6 · Work</span>
+        <span class="pill teal"><span class="k"></span>Module 7 · Economy</span>
+        <span class="pill gold"><span class="k"></span>Module 8 · Culture</span>
+        <span class="pill"><span class="k"></span>Module 9 · Digital</span>
+      </div>
+
+      <div class="map">
+        <a class="map-card" href="#eye"><span class="tag">Module 6</span><h3>The Eye of the Master</h3><p>Pasquinelli: AI as the division of labour</p></a>
+        <a class="map-card" href="#braverman"><span class="tag">Module 6</span><h3>Marx, Taylorism, Braverman</h3><p>Deskilling, and Grint's six criticisms</p></a>
+        <a class="map-card c-teal" href="#hw"><span class="tag">Module 7</span><h3>India's Socially Regulated Economy</h3><p>Harriss-White: gender, religion, caste, space, class, state</p></a>
+        <a class="map-card c-teal" href="#hayes"><span class="tag">Module 7</span><h3>Passive Investors</h3><p>Hayes: roboadvisors and "don't do"</p></a>
+        <a class="map-card c-teal" href="#polanyi"><span class="tag">Module 7</span><h3>Disembedded and Always Embedded</h3><p>Polanyi, Granovetter, Block</p></a>
+        <a class="map-card c-gold" href="#gulag"><span class="tag">Module 8</span><h3>Ghosts of the Gulag</h3><p>Ulturgasheva: arinkael and the open body</p></a>
+        <a class="map-card c-gold" href="#religion"><span class="tag">Module 8 · Giddens</span><h3>Religion</h3><p>Marx, Durkheim, Weber, and secularization</p></a>
+        <a class="map-card c-gold" href="#edu"><span class="tag">Module 8 · Giddens</span><h3>Education and Cultural Reproduction</h3><p>Bernstein, Willis, Bourdieu</p></a>
+        <a class="map-card c-gold" href="#flows"><span class="tag">Module 8 · Ritzer</span><h3>Global Culture and Cultural Flows</h3><p>Differentialism, hybridization, convergence</p></a>
+        <a class="map-card c-gold" href="#hiphop"><span class="tag">Module 8</span><h3>True School</h3><p>Harkness: situational authenticity</p></a>
+        <a class="map-card c-gold" href="#frankfurt"><span class="tag">Module 8 · Giddens</span><h3>Critical Theory</h3><p>The Frankfurt School and Habermas</p></a>
+        <a class="map-card" href="#hine"><span class="tag">Module 9</span><h3>Ethnography for the Internet</h3><p>Hine: embedded, embodied, everyday</p></a>
+        <a class="map-card" href="#rti"><span class="tag">Module 9</span><h3>Safer Civic Participation</h3><p>RTI, anonymity, and human mediation</p></a>
+        <a class="map-card" href="#cruel"><span class="tag">Module 9</span><h3>Cruel Companionship</h3><p>Muldoon and Parke: AI companions</p></a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 · MODULE 6 - THE EYE OF THE MASTER
+    ============================================================ -->
+    <section class="section" id="eye" data-num="01" data-title="The Eye of the Master (Pasquinelli)">
+      <div class="section-head">
+        <div class="section-index">01</div>
+        <div class="htext">
+          <h2>The Eye of the Master</h2>
+          <div class="source">Module 6 · <b>Pasquinelli, <em>The Eye of the Master: A Social History of Artificial Intelligence</em> (Verso, 2023), and the class slides</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The central thesis</h3>
+        <p>The usual story says AI is a quest to "solve intelligence" by copying the mind or the brain. For Pasquinelli the thing being copied is <b>the intelligence of labour and social relations</b>. AI is a project to capture the knowledge that people show in their individual and collective behaviour, and to encode it into algorithmic models so that tasks can be automated.</p>
+        <p>He opens with the truck driver. Few people in the twentieth century would have called a truck driver a <dfn>cognitive worker</dfn>. The attempt to build self-driving vehicles has shown that driving needs high cognitive skill, fast problem solving, and a tacit cultural code that changes from place to place. It is a social and cooperative activity. If driving can be turned into an algorithm at all, it is because driving is already a logical activity. In his words, <b>all labour is logic</b>.</p>
+        <p>Two older ideas support this. <b>Richard Sennett</b> says "making is thinking", and the historians Roberts and Schaffer speak of the <dfn>mindful hand</dfn>, a hand that designs and invents as well as lifts. The denial that manual labour is intelligent is a symptom of the overgrowth of the digital sphere, and it feeds the aura of mystery around AI. His two epigraphs make the same point. Marx says the skill of the single machine operator vanishes before the science and social labour embodied in machinery, which together make up the power of the "master". Gramsci says <b>all human beings are intellectuals</b>, since <em>homo faber</em> cannot be separated from <em>homo sapiens</em>.</p>
+
+        <h3>Labour, rules and automation</h3>
+        <ul>
+          <li><b>Adam Smith</b> set out the division of labour in <em>The Wealth of Nations</em>.</li>
+          <li><b>Gaspard de Prony</b>, in late eighteenth-century France, applied the division of labour to hand calculation in order to produce logarithmic tables. He arranged three groups of clerks in a hierarchy, each doing one part of the calculation: mathematicians at the top set the problem, and at the bottom students and unemployed hairdressers did the additions and subtractions. Pasquinelli calls this a <dfn>social algorithm</dfn>.</li>
+          <li><b>Charles Babbage</b> took the division of labour as the internal principle of his <b>Difference Engine</b>. He also saw that the division of labour lets you compute the cost of production, which is the <dfn>Babbage principle</dfn>.</li>
+          <li><b>Taylorism</b> was the peak of this mechanical way of thinking. Braverman noted that Taylor understood the Babbage principle better than anyone of his time. <b>Time and motion study</b> used photography to record gestures, through the <b>cyclogram</b> of the Soviet Aleksei Gastev and the <b>chronocyclegraph</b> of Frank and Lillian Gilbreth.</li>
+        </ul>
+        <p>From this comes his theory of invention. Looms and lathes, usually credited to a lone engineer, came from imitating the <b>collective diagram of labour</b>, that is, the patterns of hands and tools and the know-how of workers. He calls this the <dfn>labour theory of automation</dfn> or the <b>labour theory of the machine</b>, and he extends it into a <b>labour theory of machine intelligence</b>.</p>
+
+        <h3>Who is the master?</h3>
+        <p>In the industrial age the factory master supervised the division of labour. His eye watched and disciplined workers in workshops, and also in camps and plantations. Foucault showed how such discipline, built on the segmenting of time, space and relations, prepared the ground for capitalist exploitation. For Marx the master was already no longer one person. It was an integrated power made of science, natural forces and the mass of social labour embodied in machinery. The eye of the master then evolved into technologies of control such as statistics. Since the late twentieth century the management of labour has turned all of society into a <dfn>digital factory</dfn>, in the form of search engines, maps, messaging apps, social networks, gig platforms, and finally AI.</p>
+
+        <div class="callout key">
+          <div class="clabel">Turing's masters, servants and girls</div>
+          <p>The founding theories of computer science carry a subtext of colonial fantasy and class division. In a 1947 lecture <b>Alan Turing</b> described the Automatic Computing Engine (<b>ACE</b>) as a hierarchy of <b>masters</b> who plan its instruction tables and <b>servants</b> who feed it cards, with "girls" reading off values. He expected the machine to replace both, and it has not. The <dfn>ghost workers</dfn> of the Global South, documented by Mary Gray and Siddharth Suri, are hidden so that the show of machine autonomy can go on. AI has mostly replaced <b>masters, that is managers</b>. Workers are still needed to produce data and to maintain the system through content filtering and evaluation.</p>
+        </div>
+
+        <h3>The many histories of AI</h3>
+        <ul>
+          <li>AI is wrapped in a vast <b>ideological construct</b>, with talk of almighty AI on one side and apocalyptic Terminator stories on the other. Myths of machine autonomy are old. Since the industrial age they have served to <b>mystify the role of workers</b>. As Schaffer put it, to make machines look intelligent, the labour force that ran them had to be made invisible.</li>
+          <li><b>Technical histories</b> draw a straight line of mathematical achievements and so reinforce <dfn>technological determinism</dfn>.</li>
+          <li><b>Critical AI studies</b> (O'Neil, Noble, Benjamin, Chun) look at AI from the standpoint of workers, communities and minorities. Pasquinelli's complaint is that even these are histories "from above". They treat people as passive subjects of control and overlook collective knowledge and labour as the source of the intelligence that AI extracts.</li>
+          <li>His own method is a <b>sociotechnical history</b> built on <dfn>historical epistemology</dfn>, which studies how social practice, the instruments of labour and scientific abstractions unfold together. He places Braverman's labour process analysis in this tradition.</li>
+          <li>The title also carries a technical point. <b>Deep learning</b> grew out of experiments in automating the labour of perception, or <b>pattern recognition</b>, which is a different origin from the theories of cognition usually credited. Of the two lineages of AI, <b>symbolic AI</b> (Dartmouth 1956, McCarthy, deductive logic, knowing-that) lost out to <b>connectionism</b> (Rosenblatt's perceptron 1957, inductive logic, knowing-how), which took off after AlexNet in 2012.</li>
+        </ul>
+
+        <h3>Where the book goes next</h3>
+        <ul>
+          <li>Chapter 1 argues that <b>labour is the first algorithm</b>. Algorithmic thinking arose from people working with tools on economic and social problems, and it is found in all civilisations. His example is the Hindu ritual Agnicayana.</li>
+          <li>Marx took from Babbage and from William Thompson the idea of knowledge accumulating in machines, which he called the <b>general intellect</b>.</li>
+          <li>The conclusion says AI automates labour and also imposes <b>social hierarchies</b> of manual and mental work. The IQ test is his example. Lewis Terman wrote in 1919 that an IQ of 75 or below belongs in the unskilled labour class. On this view the class, gender and racial bias of AI is a built-in feature of automation under capitalism, and AI and ghost work are two sides of one mechanism.</li>
+        </ul>
+
+        <h3>Babbage and the mechanisation of mental labour</h3>
+        <p>In early nineteenth-century England a "computer" was a person, an office clerk and often a woman, who did calculations by hand. Some worked from home and returned their results by post. Babbage wanted to replace the repetitive work of many human computers with a steam-powered machine. The Difference Engine grew out of a business aim, which was to automate the calculation of logarithms and sell error-free tables. So the automatic computer came out of a project to <b>mechanise the mental labour of clerks</b>. The Engine was hardware and software at once, it used de Prony's method of differences, and unlike the Jacquard loom with its punched cards it was not programmable.</p>
+        <p>Babbage gave two principles of labour analysis.</p>
+        <ul>
+          <li>The <b>labour theory of the machine</b>. A new machine comes to imitate and replace an earlier division of labour.</li>
+          <li>The <b>principle of labour calculation</b>, or Babbage principle. Dividing work into small tasks lets the employer calculate and buy exactly the quantity of labour each task needs.</li>
+        </ul>
+        <p>Babbage's idea was to replace de Prony's lowest class of calculators with a machine. Put together, computation emerged as both the <b>automation of the division of mental labour</b> and the <b>calculus of its cost</b>. The historian Norton Wise adds that this is a hierarchy of labour as much as a division, because it separates skill from brute force so the employer never pays for both at once. Pasquinelli calls the Babbage principle a <b>machine theory of value</b>, and says the two principles together amount to automating social hierarchies of knowledge. Babbage's mechanical notation was an early form of the flow chart and the programming language. The calculating engines were also tools for measuring, disciplining and watching labour. The word "intelligence" in that period meant both social surveillance and the mechanising of mind.</p>
+
+        <div class="callout classic">
+          <div class="clabel">Ada Lovelace, when computers were women</div>
+          <p>Lovelace helped Babbage design the Analytical Engine and wrote the first documented machine program, which makes her the first programmer in history. She called herself an "Analyst" and separated the logical structure of the Engine from its mechanical one, in effect software from hardware. Her science of <b>operations</b> covered the abstract handling of any entity, with numbers as one case. She also gave the first dismissal of "AI", holding that the Engine "has no pretensions whatever to originate anything". Schaffer's criticism is that she never raised the weavers whose skill the Jacquard cards replaced. Babbage likewise ignored the <b>Machinery Question</b>, the public debate over workers displaced by machines.</p>
+        </div>
+
+        <div class="defs">
+          <div><dt>Labour theory of automation</dt><dd>Pasquinelli's claim that machines, including AI, arise by imitating an existing division of labour and the collective know-how of workers.</dd></div>
+          <div><dt>Social algorithm</dt><dd>De Prony's hierarchy of three groups of clerks who divided up a long calculation, a division of labour applied to mental work.</dd></div>
+          <div><dt>Babbage principle</dt><dd>Dividing a job into small tasks lets the employer calculate and buy exactly the amount and grade of labour each task needs.</dd></div>
+          <div><dt>The eye of the master</dt><dd>The supervising gaze of the factory owner, now spread into statistics, platforms and AI that organise the division of labour across society.</dd></div>
+          <div><dt>Digital factory</dt><dd>Society as a whole once the management of labour takes the form of search engines, apps, platforms and AI.</dd></div>
+          <div><dt>Ghost workers</dt><dd>The hidden workers, largely in the Global South, who label data and maintain AI systems so that the machine looks autonomous.</dd></div>
+          <div><dt>Mindful hand</dt><dd>The idea that manual work also thinks, designs and invents, so that making is thinking.</dd></div>
+          <div><dt>Technological determinism</dt><dd>The view that technology develops by its own logic and drives society, which linear technical histories of AI reinforce.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>State the central thesis. AI imitates the intelligence of labour and social relations, and "all labour is logic".</li>
+            <li>The chain Smith, de Prony, Babbage, Taylor, and how each links the division of labour to computation.</li>
+            <li>Babbage's two principles, and why the Difference Engine was a business project to mechanise clerical labour.</li>
+            <li>Turing's masters and servants, and why ghost workers contradict the dream of full automation.</li>
+            <li>Why Pasquinelli is unhappy with both technical histories and critical histories "from above".</li>
+            <li>Link to Module 3. This is Marx on machinery, plus Braverman on deskilling, applied to AI.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · MODULE 6 - MARX, TAYLORISM, BRAVERMAN
+    ============================================================ -->
+    <section class="section" id="braverman" data-num="02" data-title="Marx, Taylorism & Braverman">
+      <div class="section-head">
+        <div class="section-index">02</div>
+        <div class="htext">
+          <h2>Marx, Taylorism, Braverman and the Capitalist Labour Process</h2>
+          <div class="source">Module 6 · <b>Grint, <em>The Sociology of Work</em>, from the chapter "Class and Industrial Conflict"</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>Why the labour process came back</h3>
+        <p>For Marx the <dfn>labour process</dfn>, the place where human labour is mixed with raw materials to make commodities, was the key to social conflict and control. Its exploiting and alienating character made capitalism flawed at the root. After the revolution failed in the West, Marxists looked elsewhere. The Frankfurt School turned to culture and ideology, and orthodox Marxists trusted in economic determinism. Neither looked at the point of production. <b>Harry Braverman's <em>Labor and Monopoly Capital</em> (1974)</b> brought attention back to the shop floor.</p>
+        <p>Braverman's first move was to reject the easy claim that changes in the occupational structure mean rising skill. Occupational labels mislead, so you must look at the actual content of jobs and compare them with the nineteenth-century craft worker who had wide knowledge and high autonomy. For the capitalist, the problem of work is the problem of <b>managerial control</b>, that is, how to get the most effort for the least reward. The answer is to extend the division of labour, <b>separate conception from execution</b>, and deskill the workforce. This gives cheaper labour and also more compliant labour.</p>
+
+        <h3>Taylor and scientific management</h3>
+        <p><b>F.W. Taylor</b> had worked as a labourer, clerk and machinist. He saw three reasons for low output. Management lacked knowledge and was at the mercy of the workers' wisdom. Workers had a rational reason to restrict output, namely fear of lower pay or redundancy. And the payment system gave weak incentives. He blamed management, and told it to drop its "rule of thumb" and take up <dfn>scientific management</dfn>.</p>
+        <ul>
+          <li>Each task was broken into its smallest units, which were timed and measured.</li>
+          <li>Pay was by a piece rate set for each <b>individual</b>, since a collective rate would encourage unions.</li>
+          <li>Jobs were deskilled, to allow cheaper labour and to end the workers' monopoly over knowledge.</li>
+          <li><dfn>Soldiering</dfn> was his word for restricting output. <b>Natural soldiering</b> came from the laziness he thought was part of human nature. <b>Systematic soldiering</b> was organised by workers together, and came from poor supervision and bad incentives.</li>
+          <li>The famous case is <b>Schmidt</b>, the pig-iron shoveller. Taylor raised his output by <b>400 per cent</b> for a wage rise of <b>40 per cent</b>. Grint's dry comment is that <em>homo economicus</em> had arrived.</li>
+        </ul>
+        <p>Grint describes Taylor's method as mainly organisational and psychological. Since it was "scientific", there was nothing to bargain over, and any resistance was by definition irrational. Work was about material reward, and satisfaction did not come into it.</p>
+
+        <div class="callout">
+          <div class="clabel">How far did Taylorism really spread?</div>
+          <p>Not very far, says Grint. A strike broke out at the <b>Watertown arsenal</b> within weeks, a House committee found arbitrary practices, and Taylorist methods were banned from government-funded work from <b>1916 to 1949</b>. The American Society of Mechanical Engineers refused to publish his <em>Principles</em> as unscientific. Gantt and the Gilbreths softened the system by stressing the "human factor" and worker consent. Lenin adopted it eagerly, Japan only partly. Taylorism as a complete and distinct strategy had very limited application anywhere.</p>
+        </div>
+
+        <h3>Braverman's three principles</h3>
+        <ol>
+          <li>The <b>dissociation of the labour process from the skills of the workers</b>.</li>
+          <li>The <b>separation of conception from execution</b>. In his words the separation of hand and brain is the most decisive single step in the division of labour under capitalism.</li>
+          <li>Management's use of its <b>monopoly over knowledge</b> to control each step of the labour process.</li>
+        </ol>
+        <p>Science and technology act as servants of capital. Machinery lets management do "by wholly mechanical means" what it used to attempt by organisation and discipline. Management becomes the store of the knowledge taken from workers. Office work and retail are rationalised in the same way, so clerical workers are <dfn>proletarianized</dfn>. Braverman takes this as confirming Marx's forecast of a homogeneous, deskilled working class.</p>
+
+        <h3>Grint's criticisms of Braverman</h3>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>Problem</th><th>What Grint says</th></tr></thead>
+            <tbody>
+              <tr><th>1. A romantic baseline</th><td>The skilled craft worker was never typical. Most people never worked in that tradition, and control by a machine is not obviously worse than control by an autocratic boss.</td></tr>
+              <tr><th>2. Skill is socially constructed</th><td>Braverman treats skill as craft mastery that can be measured. In fact groups negotiate the label. Printers kept "skilled" status, clerical work lost it, and gender shapes what counts as skill. Neither discretion nor the number of rules measures skill.</td></tr>
+              <tr><th>3. Control is not class action</th><td>Worker control over a job says nothing about what it is used for. It may be used against other workers, or by union leaders against members.</td></tr>
+              <tr><th>4. No homogeneous proletariat</th><td>The working class has become more divided, manual work has shrunk, and 96 per cent in one survey said the skill in their job was stable or rising.</td></tr>
+              <tr><th>5. Unreliable data</th><td>He assumes Taylorism was adopted widely and without resistance, and that there is "one best way" to manage. Friedman's contrast of <b>responsible autonomy</b> and <b>direct control</b> shows managers have more than one strategy.</td></tr>
+              <tr><th>6. Rules on paper</th><td>Timings for opening office drawers are closer to Gouldner's <b>mock bureaucracy</b>, rules that exist and are ignored. What counts is how agents interpret rules.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Later writers tried to repair the approach. <b>Burawoy</b> showed how management generates consent and how workers play games. <b>Edwards</b> described three phases of control, namely simple, technical and bureaucratic, each a response to worker resistance. Grint finds both too narrow.</p>
+
+        <div class="callout key">
+          <div class="clabel">Grint's own conclusion</div>
+          <p>Control costs money, so capitalism does not live on the detail of control. <b>The essential condition of capitalism is profit</b>, and control over the labour process matters to employers only so far as it pays. There are many ways to make a profit, so whether labour is degraded, enskilled, given autonomy or removed altogether depends on what pays. Technology has uses other than class control. And no single social dimension, class included, can cover the complexity of relations at work, where gender, race, craft and family also matter.</p>
+        </div>
+
+        <div class="defs">
+          <div><dt>Labour process</dt><dd>The point of production, where human labour is combined with materials to make commodities, and for Marx the key site of conflict and control.</dd></div>
+          <div><dt>Scientific management</dt><dd>Taylor's system of breaking tasks into timed units, deskilling jobs and paying individual piece rates, with planning kept by management.</dd></div>
+          <div><dt>Conception and execution</dt><dd>Braverman's term for the split between planning work, kept by management, and carrying it out, left to workers.</dd></div>
+          <div><dt>Deskilling</dt><dd>The removal of knowledge and discretion from jobs so that labour becomes cheaper and easier to control.</dd></div>
+          <div><dt>Soldiering</dt><dd>Taylor's word for workers restricting output, either from natural laziness or, systematically, by collective agreement.</dd></div>
+          <div><dt>Proletarianization</dt><dd>The sinking of clerical and white-collar work to the conditions of manual wage labour.</dd></div>
+          <div><dt>Responsible autonomy</dt><dd>Friedman's managerial strategy of giving workers leeway, set against Taylorist direct control.</dd></div>
+          <div><dt>Mock bureaucracy</dt><dd>Gouldner's term for rules that exist on paper but that nobody enforces or follows.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Taylor's three reasons for low output and the main features of scientific management, with the Schmidt example.</li>
+            <li>Braverman's three principles and the deskilling thesis.</li>
+            <li>Grint's own essay question: "Machinery offers to management the opportunity to do by wholly mechanical means that which it had previously attempted to do by organizational and disciplinary means." Is Braverman right?</li>
+            <li>At least four of Grint's criticisms, above all that skill is socially constructed and that capitalists pursue profit before control.</li>
+            <li>Connect to Pasquinelli. Both readings turn on the Babbage principle and the separation of hand and brain.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · MODULE 7 - HARRISS-WHITE
+    ============================================================ -->
+    <section class="section" id="hw" data-num="03" data-title="India's Socially Regulated Economy">
+      <div class="section-head">
+        <div class="section-index">03</div>
+        <div class="htext">
+          <h2>India's Socially Regulated Economy</h2>
+          <div class="source">Module 7 · <b>Barbara Harriss-White (2005), a summary of her book <em>India Working</em></b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The argument in one paragraph</h3>
+        <p>By far the larger part of the Indian economy is not directly regulated by the state. It is regulated by <b>social institutions</b>, which express forms of power that are not confined to the economy. Nehru, Myrdal and later the champions of liberalisation all expected that modern business, planning and then the market would dissolve these "primordial identities", so that contract would replace custom and achieved traits would replace ascribed ones. Harriss-White argues that this has not happened. These institutions structure accumulation, they resist change by macro-economic policy, and policy is carried out through their filters. <b>Under liberalisation they rework themselves as economic institutions</b>, where the reformers expected them to dissolve.</p>
+        <p>The paper is a tribute to <b>Radhakamal Mukerjee</b> of the Lucknow School, who held that the economy is an <dfn>instituted</dfn> thing and that individuals cannot be studied apart from their institutional setting.</p>
+
+        <h3>The informal economy</h3>
+        <ul>
+          <li><b>88 per cent</b> of Indians live and work in settlements of under 200,000 people. In this small-town and rural economy about 90 per cent of spending goes to the output of the informal economy.</li>
+          <li>The <dfn>informal economy</dfn> either lies outside state regulation (unregistered, unorganised) or is officially regulated but does not follow the rules.</li>
+          <li>Only <b>7 per cent</b> of the labour force of over 390 million are on regular wages, and only half of those are unionised. About 3 per cent of the workforce is unionised.</li>
+          <li>The informal economy makes up about <b>60 per cent of net domestic product</b>, 68 per cent of income and 60 per cent of savings. It is not shrinking, and it has been the <b>shock absorber</b> of the reform period.</li>
+        </ul>
+
+        <h3>The social structures of accumulation</h3>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>Structure</th><th>How it regulates the economy</th></tr></thead>
+            <tbody>
+              <tr><th>Gender</th><td>The basic unit is the <b>family firm</b>, a hierarchy of authority among men. Marriage alliances protect capital, and a family's "credit" includes its women's conduct. Elite women are kept out of productive work (Boserup's <b>productive deprivation</b>). As wealth rises, girls' survival chances fall. The juvenile sex ratio was 930 in landless households and <b>784</b> in the local business elite.</td></tr>
+              <tr><th>Religious plurality</th><td>Religion supplies collective identity, credit, reputation, skills and insurance. <b>Jains</b> are 0.4 per cent of the population yet prominent as merchants and moneylenders. India's "cellularity" maps onto <b>communities of accumulation</b>. Muslims dominate tanning, recycling and bidi work. The state has not stayed equidistant from religions.</td></tr>
+              <tr><th>Caste</th><td>"<b>Caste is the strongest trades union.</b>" Nearly half of firms in her south Indian town are caste-homogeneous. Scheduled Castes do the sanitary work. <b>Caste-cum-trade associations</b> ration entry, settle disputes, fix wages and prices, and deal with the state. Caste ideology suppresses the conflict between capital and labour.</td></tr>
+              <tr><th>Space</th><td>Urban growth takes the form of specialised <b>clusters</b>, such as Tirupur for hosiery and Sivakasi for matches. Most are low-tech and exploitative, and capital does not move freely between castes and places.</td></tr>
+              <tr><th>Class</th><td>Labour is mostly casual or self-employed, without contracts or rights. Women earn about 70 per cent of men's wages. Capital outside the big cities is held by the <b>intermediate classes</b>.</td></tr>
+              <tr><th>State</th><td>The state is shaped by the same identities, and is surrounded by a <b>shadow state</b>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>The intermediate classes</h3>
+        <p>The term comes from <b>Michal Kalecki</b>. It names a loose coalition of <b>rich peasants</b>, <b>family businesses</b>, and the collusive part of the local <b>bureaucracy</b>. Their income is a mix of a reward for labour and a profit. They sit between workers and capitalists proper, and they are the "masters of the countryside". They gain from controlling scarcity, from collusion in markets and from rents. Their biggest hidden subsidy is <b>tax evasion</b>. Their influence on policy comes when it is implemented, after it has been formulated.</p>
+
+        <h3>The state, and "real unorthodox structural adjustment"</h3>
+        <ul>
+          <li>The state is an <b>ambivalent</b> agent. It is a more progressive employer of women than private firms, yet it reinforces male property rights. It is the main champion of oppressed castes through reservations, yet it is permeated by private status.</li>
+          <li>The <dfn>shadow state</dfn> is the penumbra of people who live off intermediation and corruption around the official state.</li>
+          <li>Myrdal called India a <b>soft state</b>. It has grown softer while the social structures around it have hardened. Weber's "steel cage" has rusted.</li>
+          <li>The real structural adjustment came before the World Bank and the IMF. It is the <b>under-funding of the state</b> as taxable resources leak into the black economy. Her image is the fire brigade with firemen but no water or diesel.</li>
+          <li>Liberalisation was meant to bring regional convergence. What has happened is sharper regional and social inequality, and an upsurge of religiosity. Gender relations are the most resistant to change, while caste and religion are flexible and are being reworked.</li>
+          <li>"Policy" is best seen as the outcome of struggles over rents. The economy is <b>socially regulated but fundamentally anti-social</b>, and change needs a culture of collective accountability.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Social structures of accumulation</dt><dd>The non-market institutions (gender, religion, caste, space, class, state) through which capital is accumulated and the economy regulated.</dd></div>
+          <div><dt>Informal economy</dt><dd>Economic activity that is outside state regulation, or formally regulated but not run by the rules. Most of India's economy.</dd></div>
+          <div><dt>Intermediate classes</dt><dd>Kalecki's term for rich peasants, family businesses and collusive local officials, who sit between labour and big capital.</dd></div>
+          <div><dt>Shadow state</dt><dd>The network of brokers, fixers and corrupt dealings that grows around the formal state and depends on it.</dd></div>
+          <div><dt>Soft state</dt><dd>Myrdal's term for a state unable to enforce its own laws and policies.</dd></div>
+          <div><dt>Caste-cum-trade association</dt><dd>A business association built on caste that regulates entry, prices, wages and disputes in a local trade.</dd></div>
+          <div><dt>Productive deprivation</dt><dd>Boserup's term for the withdrawal of women from productive work, which lowers their status.</dd></div>
+          <div><dt>Instituted economy</dt><dd>The idea, from Mukerjee and Polanyi, that the economy is always organised through social institutions.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>What "socially regulated" means, with one example each for gender, religion, caste and space.</li>
+            <li>The size of the informal economy. Learn 88 per cent, 7 per cent, and 60 per cent of NDP.</li>
+            <li>Who the intermediate classes are, and how they survive liberalisation.</li>
+            <li>Why liberalisation intensifies social regulation.</li>
+            <li>Read this as a case of Polanyi's embeddedness. Markets in India cannot work without non-market institutions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · MODULE 7 - HAYES
+    ============================================================ -->
+    <section class="section" id="hayes" data-num="04" data-title="Passive Investors (Hayes)">
+      <div class="section-head">
+        <div class="section-index">04</div>
+        <div class="htext">
+          <h2>The Active Construction of Passive Investors</h2>
+          <div class="source">Module 7 · <b>Adam S. Hayes (2019), "Roboadvisors and algorithmic 'low-finance'", <em>Socio-Economic Review</em></b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The question and the answer</h3>
+        <p>What happens to algorithmic finance when it crosses from Wall Street into the hands of ordinary people? Hayes studies <dfn>roboadvisors</dfn>, which are cheap, automated investment platforms that take very small sums. His argument is that roboadvisors are <b>actively constructing passive investors</b>. They discipline their users through technology that embodies the standard models of financial economics, and they enforce a principle of <b>"don't do"</b> towards the market.</p>
+
+        <h3>Background</h3>
+        <ul>
+          <li><b>Betterment</b> launched as the first roboadvisor in <b>2010</b>. By 2019 US roboadvisors managed about three-quarters of a trillion dollars for 8.3 million users.</li>
+          <li><dfn>Low-finance</dfn> means financial services for lay investors with modest income and financial literacy. Roboadvisors chase the $1,000 client. The average roboadvised account was about $20,600, against about $1 million with a human advisor. At Acorns it was $424.</li>
+          <li>Users are younger, lower-income and more diverse, with a median age of 25 to 30 against 55 to 60 for US investors generally.</li>
+          <li>The alternatives were to do it yourself, which leads to over-trading and emotional errors, or to hire an advisor at about 1 per cent a year with a high minimum balance.</li>
+        </ul>
+
+        <h3>Method</h3>
+        <p>An <b>ethnography of 16 roboadvisors</b> and their algorithms, in three parts. He opened and funded an account at each as a <b>participant user</b>, he analysed their <b>SEC regulatory filings</b>, and he held <b>in-depth interviews</b> with senior staff. The three were used to triangulate each other. High-frequency trading (HFT) algorithms are secret black boxes, or <b>objects of ignorance</b>. Roboadvisors are open and regulated, so they are <dfn>objects of cognizance</dfn>.</p>
+
+        <h3>The model inside the machine</h3>
+        <ul>
+          <li><dfn>Passive investing</dfn> means buying and holding a diversified portfolio that copies the market, without trying to beat it. Roboadvisors build portfolios out of <b>ETFs</b>.</li>
+          <li><dfn>Modern Portfolio Theory</dfn> (<b>Markowitz, 1952</b>) balances risk against expected return and finds the best mix of assets by <b>mean-variance optimization</b>.</li>
+          <li>The <b>efficient market hypothesis</b> says prices already reflect all information, so nobody can beat the market in a systematic way. The evidence supports passive investing. Over 2002 to 2017 only about 8 per cent of active funds beat the index.</li>
+        </ul>
+
+        <h3>How passivity is built</h3>
+        <p>Users are made <dfn>doubly passive</dfn>. Their portfolio is passive, and they are kept at a distance from it by automation.</p>
+        <ul>
+          <li><b>Capping risk at account opening.</b> You may choose a more conservative portfolio than the algorithm suggests, but often not a more aggressive one.</li>
+          <li><b>Nudges and interface design.</b> There are no stock prices, no red and green, no market history and no trade button. The screen shows your projected future, which Beckert calls <b>fictional expectations</b>. Compare Robinhood, which is built to make you trade.</li>
+          <li><b>Placebo tools.</b> Retirement calculators and sliders give a feeling of control but do not change the allocation, like the "close door" button in a lift. They exist to overcome <b>algorithm aversion</b>.</li>
+          <li><b>Targeted messages.</b> In the market fall of February 2018, only users who logged in often got "stay the course" emails.</li>
+          <li><b>Tax-impact warnings.</b> About 70 per cent of users shown the tax cost of a change gave it up, and about 90 per cent when the cost was over $50.</li>
+          <li><b>Human advisors as coaches.</b> They cannot change your portfolio. They are there as a kind of therapist, to keep you with the model.</li>
+        </ul>
+        <p>The result is that 80 to 90 per cent of users comply. The firms use <b>behavioural economics</b> in a telling way. The assumption is that the models are fine and the humans need reform.</p>
+
+        <div class="callout key">
+          <div class="clabel">The Foucault contrast to learn</div>
+          <p><b>HFT traders</b> use <dfn>technologies of the self</dfn>. They discipline their own emotions, under the rule "don't think", and so are made into market <b>subjects</b>. <b>Roboadvisor users</b> are placed under <dfn>technologies of power</dfn>. The platform determines their conduct, under the rule "don't do", and they are <b>objectified</b>. This is a form of <b>governmentality</b>. The user comes close to <em>homo economicus</em> on paper without calculating anything, by handing agency over to a machine.</p>
+        </div>
+
+        <h3>Wider implications</h3>
+        <ul>
+          <li><b>The governed investor.</b> Firms use MPT largely because it can be defended before regulators as "Nobel prize-winning research". One CEO put it at 80 per cent regulatory and 20 per cent conviction. The passive investor fits a neoliberal ideal that equates rational with responsible. Following Wendy Brown, the human becomes capital, and Hayes compares this to Marx's alienation.</li>
+          <li><b>Rational means average.</b> A passive investor accepts never beating the market, which goes against the cultural ideal of being exceptional.</li>
+          <li><b>The perils of passive.</b> Index funds now own about 17 per cent of each S&amp;P 500 firm. The "Big Three" are Vanguard, BlackRock and State Street. <b>Horizontal shareholding</b>, where one owner holds rival firms, can weaken competition and corporate control.</li>
+          <li><b>Free riding.</b> If everyone indexes, nobody prices shares, markets become less efficient, and MPT stops working. MacKenzie calls this <dfn>counterperformativity</dfn>.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Roboadvisor</dt><dd>An automated, low-cost digital platform that allocates and manages a client's investments by algorithm with little human involvement.</dd></div>
+          <div><dt>Low-finance</dt><dd>Hayes's term for financial services aimed at ordinary investors with small sums, as opposed to the high finance of Wall Street.</dd></div>
+          <div><dt>Modern Portfolio Theory</dt><dd>Markowitz's 1952 model for choosing the mix of assets that gives the highest expected return for a given level of risk.</dd></div>
+          <div><dt>Doubly passive investor</dt><dd>A user who holds a passive index portfolio and is also kept away from any decisions about it by automation.</dd></div>
+          <div><dt>Technologies of power</dt><dd>Foucault's term for techniques that determine people's conduct and submit them to certain ends, so objectifying the subject.</dd></div>
+          <div><dt>Technologies of the self</dt><dd>Foucault's term for techniques by which people work on and control themselves, as HFT traders do with their emotions.</dd></div>
+          <div><dt>Object of cognizance</dt><dd>An algorithm that an observer can know through direct use and public filings, unlike the black-box object of ignorance.</dd></div>
+          <div><dt>Counterperformativity</dt><dd>MacKenzie's term for when the use of an economic model changes the world so that it fits the model less well.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Explain the title. Why does making someone passive take so much active work?</li>
+            <li>List the disciplinary techniques, with the placebo button and the "stay calm" emails as examples.</li>
+            <li>"Don't think" against "don't do", and technologies of the self against technologies of power.</li>
+            <li>His three-part method, and why roboadvisors suit ethnography better than HFT.</li>
+            <li>The risks of mass passive investing: concentrated ownership, free riding, counterperformativity.</li>
+            <li>Link to Pasquinelli and Braverman. Here too an algorithm takes over judgement from the person.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05 · MODULE 7 - POLANYI
+    ============================================================ -->
+    <section class="section" id="polanyi" data-num="05" data-title="Disembedded & Always Embedded (Polanyi)">
+      <div class="section-head">
+        <div class="section-index">05</div>
+        <div class="htext">
+          <h2>'Disembedded' and 'Always Embedded' Economies</h2>
+          <div class="source">Module 7 · <b>Gareth Dale, <em>Karl Polanyi: The Limits of the Market</em>, Chapter 5</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>What embeddedness means</h3>
+        <p><dfn>Embeddedness</dfn> is a metaphor for a state of dependence on, or subordination to, something else. It concerns the relation between "economy" and "society", which is the founding question of economic sociology. Dale notes that the debate has produced "some light and not a little heat", because the term stands on divided ground and has been put to very different uses.</p>
+
+        <h3>Where the idea came from</h3>
+        <ul>
+          <li><b>Marx.</b> Economic behaviour cannot be studied apart from society. "The economy" only appears as a separate sphere once workers are separated from the means of production and must sell their labour power. His theories of alienation and of the separation of politics from economics both rest on class.</li>
+          <li><b>Tönnies.</b> <em>Gemeinschaft und Gesellschaft</em>. He saw the state as a class-neutral tool for reforming capitalism through welfare.</li>
+          <li><b>Weber.</b> Economic action is grounded in culture and ethos. The market alone cannot give a rational and stable social order, and needs limits set by morality and the state.</li>
+        </ul>
+        <p>Polanyi first used the word in a 1934 essay (<em>eingebettet</em>). His classic statements came between 1947 and 1957.</p>
+
+        <h3>Polanyi's contrast</h3>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th></th><th>Embedded economy</th><th>Disembedded economy</th></tr></thead>
+            <tbody>
+              <tr><th>Type of society</th><td>Status, <b>Gemeinschaft</b></td><td>Contract, <b>Gesellschaft</b></td></tr>
+              <tr><th>Place of the economy</th><td>Enmeshed in non-economic institutions such as kinship, religion and politics</td><td>A sphere that is "institutionally separate and motivationally distinct"</td></tr>
+              <tr><th>Motives</th><td>Status, religion, morality, one's role in the whole</td><td>"Fear of hunger and hope of gain", <em>homo oeconomicus</em></td></tr>
+              <tr><th>Examples</th><td>The Trobriand Islands, ancient Athens, Dahomey</td><td>Nineteenth-century Britain</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The market system inverts the historical norm. The economy used to be enmeshed in society. Now <b>social relationships are embedded in the economic system</b>.</p>
+
+        <div class="callout">
+          <div class="clabel">Ambiguities in Polanyi</div>
+          <p>Is embeddedness an empirical description or an <b>ideal type</b>? Is it a matter of degree, or an axiom that all economies are embedded? And which societies go where? Polanyi placed <b>Stalin's Russia</b> on the embedded side. Dale disagrees, siding with Polanyi's student Hopkins. Stalinism treated labour as a commodity and subordinated everything to accumulation, so that, as Konrád and Szelényi put it, Stalin universalised commodity relations.</p>
+        </div>
+
+        <h3>Further adventures of the concept</h3>
+        <ul>
+          <li><b>Mark Granovetter (1985)</b> brought the word into economic sociology, for a different purpose. He steered between the <b>undersocialized</b> view of the actor in economics and the <b>oversocialized</b> view he attributed to Polanyi. For him all economic action, including in market societies, is embedded in <b>networks of social relations</b>. This is the <dfn>network approach</dfn>. It is micro-level and individualist, and says nothing about the economic system as a whole. Maucourant and Cangiani therefore call it a different concept from Polanyi's. Granovetter himself later said the term had been stretched until it meant almost nothing.</li>
+          <li><b>Greta Krippner.</b> By looking at the social relations around the market, economic sociologists have taken the market itself for granted. Yet "the state, culture and politics are contained in every market act".</li>
+          <li><b>Fred Block</b> reads Polanyi as having discovered the <dfn>always embedded economy</dfn>. A pure self-regulating market is an illusion that can be pursued but never reached, because protection keeps re-embedding it. So markets always need rules and institutions, and there is no built-in barrier to reforming them democratically.</li>
+          <li><b>Block's critics</b>, and Dale, reply that this turns Polanyi into a commonplace that Adam Smith already knew. Polanyi's real point is that market society is <b>unique</b>. Its institutions cut the economy off from social control and moral duty. Disembedded here means separate from <b>non-economic institutions</b> (no economy sits outside society), to the point where society is embedded in its economy.</li>
+        </ul>
+
+        <h3>Decommodification and re-embedding</h3>
+        <p>Polanyi did not treat <dfn>decommodification</dfn> as the same thing as re-embedding or as socialism. Trade unions, factory laws and unemployment insurance take labour partly out of the market. But fascism showed that economy and society could be reunited in a morbid form. He was optimistic that the world was moving toward re-embedding, and pointed to the Soviet Union, Attlee's Britain and the New Deal. Dale calls this wishful. Those reforms left the capitalist class in place, and it struck back in the 1970s, which leads to the <b>neoliberal turn of the 1980s</b>.</p>
+
+        <div class="defs">
+          <div><dt>Embeddedness</dt><dd>The enmeshing of economic life in non-economic institutions such as kinship, religion, politics and morality.</dd></div>
+          <div><dt>Disembedded economy</dt><dd>Polanyi's market society, where the economy is a separate sphere run by its own laws and by hunger and gain, and society is subordinated to it.</dd></div>
+          <div><dt>Always embedded economy</dt><dd>Block's reading of Polanyi, that no market can exist without rules and institutions, so a fully disembedded economy is impossible.</dd></div>
+          <div><dt>Network approach</dt><dd>Granovetter's version of embeddedness, where economic action is shaped by the actor's position in networks of personal relations.</dd></div>
+          <div><dt>Gemeinschaft and Gesellschaft</dt><dd>Tönnies's pair, community based on status, feeling and custom, against society based on contract and interest.</dd></div>
+          <div><dt>Decommodification</dt><dd>Taking labour, land or money partly out of the market, for instance through unions, factory laws and social insurance.</dd></div>
+          <div><dt>Countermovement</dt><dd>Polanyi's term for society's protective reaction against the spread of the self-regulating market.</dd></div>
+          <div><dt>Undersocialized and oversocialized</dt><dd>Granovetter's two extremes, the isolated rational actor of economics, and the actor wholly governed by social norms.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define embedded and disembedded economies with Polanyi's examples and the two motives of hunger and gain.</li>
+            <li>Polanyi against Granovetter. System-level institutions against personal networks.</li>
+            <li>Block's "always embedded" thesis and the reply to it. This is the title of the reading, so expect it.</li>
+            <li>Why Dale thinks Stalin's Russia was not an embedded economy.</li>
+            <li>Apply it. Harriss-White's India is an economy where markets visibly depend on non-market institutions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06 · MODULE 8 - GHOSTS OF THE GULAG
+    ============================================================ -->
+    <section class="section" id="gulag" data-num="06" data-title="Ghosts of the Gulag">
+      <div class="section-head">
+        <div class="section-index">06</div>
+        <div class="htext">
+          <h2>Ghosts of the Gulag in the Eveny World of the Dead</h2>
+          <div class="source">Module 8 · <b>Olga Ulturgasheva (2017), <em>The Polar Journal</em></b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The setting</h3>
+        <p>The <b>Eveny</b> are a people of about 17,000 in northeast Siberia who herd reindeer and hunt. In the 1930s the Soviet state began to settle them. In the <b>1970s</b> one community was moved into a village built on the site of a former <b>Stalinist labour camp</b>, beside a branch of the Kolyma road known as the <b>Road of Bones</b>. The site was chosen as a rational one because it was near the supply road. Ulturgasheva did fieldwork there between 2003 and 2013.</p>
+        <p>Villagers young and old told her of meeting <dfn>arinkael</dfn> (singular <em>arinka</em>), the spirits of the violently dead. These were the ghosts of Russian prisoners, or <em>zeki</em>, seen in the house of culture, the school, the depot, the heating station and particular flats. Once a ghost appears in a flat it keeps coming until the people move out.</p>
+
+        <h3>Why ghosts, and why now</h3>
+        <ul>
+          <li>For the Eveny, moving into a place others once occupied is an intrusion into a space that holds their <b>traces</b>. A person who died by violence stays among the living as an arinka. So the village is <em>ningichepche tor</em>, an accursed or contaminated space.</li>
+          <li>Memory of the Gulag was silenced for seventy years. Talking and even remembering were dangerous, so there was no public recognition or reconciliation.</li>
+          <li>The sightings became common only in the <b>early 1990s</b>, after the Soviet infrastructure collapsed. Flights stopped, later settlers left, buildings emptied, and people felt abandoned and trapped. The ghosts filled the empty spaces.</li>
+          <li>For her the ghosts are residues of a violent past that go on remaking the village as camp territory, which reading them as a <b>metaphor</b> for post-socialist hardship misses.</li>
+        </ul>
+
+        <h3>The theory</h3>
+        <ul>
+          <li><b>Durkheim on contagion.</b> The sacred and the profane must be kept apart, and the sacred tends to spread into whatever is near it. Violent death creates dangerous forces that need a rite of atonement. Ulturgasheva <b>extends</b> this. Here it is the dead who draw the boundary and expand their territory, while the living are at risk of losing their own character.</li>
+          <li><b>Deleuze and Guattari on affect.</b> Affect is a pre-personal bodily response that raises or lowers a body's capacity to act. The ghosts work on people in this way. She also uses their idea of <b>unnatural participation</b>.</li>
+          <li><b>The Eveny "open body"</b> (<em>angati aerteng</em>). This is a weak tie between soul and body, as in a newborn child, which leaves a person open to capture by spirits. Seeing a ghost can reveal that you have an open body.</li>
+          <li><b>Irreversible metamorphosis.</b> The fear is of turning into an arinka oneself. Drinking alone, violence and suicide are read as signs of this.</li>
+        </ul>
+
+        <div class="callout key">
+          <div class="clabel">Cosmological entrapment</div>
+          <p>Ordinary arinkael are former kin who still respond to ritual offerings. The Gulag ghosts do not, which makes them fully "other". The shamans who could have dealt with them were persecuted or killed by the Soviet state. In 2002 villagers invited an <b>Orthodox priest</b> to exorcise the ghosts, and it failed. The dead are blocked from proper burial and mourning, and the living are blocked from leaving. Ulturgasheva calls this double blockage <dfn>cosmological entrapment</dfn>. The only answer left is the nomad's one, which is to move house and give the building up to the ghosts.</p>
+        </div>
+
+        <p>Her method is a shift away from archives and official history, which are missing or closed, toward the everyday interactions through which the debris of the Gulag takes part in <dfn>world-making</dfn>. The memory of the Gulag is kept alive here without any deliberate human effort to remember. And the Gulag ghosts in turn <b>expand Eveny cosmology</b>, by enlarging the category of arinkael.</p>
+
+        <div class="defs">
+          <div><dt>Arinkael</dt><dd>In Eveny belief, the malevolent spirits of people who died by violence and remain among the living. Singular arinka.</dd></div>
+          <div><dt>Open body</dt><dd>The Eveny idea (angati aerteng) of a weak tie between soul and body that leaves a person open to capture by spirits.</dd></div>
+          <div><dt>Contagion</dt><dd>Durkheim's idea that the sacred spreads to whatever it touches, extended here to ghosts that contaminate a place and its people.</dd></div>
+          <div><dt>Affect</dt><dd>Deleuze and Guattari's term for a pre-reflective bodily response that increases or reduces a body's capacity to act.</dd></div>
+          <div><dt>Cosmological entrapment</dt><dd>The condition where the dead cannot be sent on and the living cannot leave, so both are locked together in a haunted place.</dd></div>
+          <div><dt>World-making</dt><dd>The ongoing social process by which people and non-human agents, here ghosts, together constitute a lived world.</dd></div>
+          <div><dt>Ningichepche tor</dt><dd>The Eveny term for an accursed or contaminated space full of arinkael.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>How a suppressed history is remembered through ghosts when there are no archives or memorials.</li>
+            <li>How she uses and extends Durkheim's sacred and profane and his idea of contagion.</li>
+            <li>The open body, irreversible metamorphosis, and cosmological entrapment.</li>
+            <li>Why the hauntings grew after the Soviet collapse, and why "just a metaphor" is not enough.</li>
+            <li>Link to the religion reading. This is a case of lived religion and of culture as a system of meaning.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         07 · MODULE 8 - RELIGION
+    ============================================================ -->
+    <section class="section" id="religion" data-num="07" data-title="Religion (Giddens)">
+      <div class="section-head">
+        <div class="section-index">07</div>
+        <div class="htext">
+          <h2>Religion as a Cultural System</h2>
+          <div class="source">Module 8 · <b>Giddens, <em>Sociology</em> (9th ed.), from Chapter 18, "Religion"</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>Defining religion</h3>
+        <p>Sociologists set aside whether a belief is true. Their questions are about how religion is organised and how it relates to the rest of society. There is no agreed definition, and Giddens sorts the attempts into three types.</p>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>Type</th><th>Idea</th><th>Problem</th></tr></thead>
+            <tbody>
+              <tr><th>Inclusive</th><td>Functionalist. Religion is whatever helps a group struggle with the "ultimate problems" of life (Yinger).</td><td>Includes too much. Football and communism become religions, and you can no longer ask whether religion is declining.</td></tr>
+              <tr><th>Exclusive</th><td>Substantive. Religion separates empirical reality from a <b>super-empirical</b> or transcendent one (Robertson).</td><td>A Western distinction that fits new religious movements poorly.</td></tr>
+              <tr><th>Definition in use</th><td>Social constructionist. Study whatever people themselves call religious.</td><td>No clear boundary, though Beckford says this does no harm to research.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Over time the first two have lost ground to the constructionist approach.</p>
+
+        <h3>The classical founders</h3>
+        <div class="thinkers">
+          <div class="thinker marx">
+            <div class="avatar">M</div>
+            <h4>Karl Marx</h4>
+            <div class="years">Religion and inequality</div>
+            <ul>
+              <li>Follows <b>Feuerbach</b>. Religion is human values projected onto gods, a form of <b>alienation</b></li>
+              <li>The "<b>opium of the people</b>", and also the "heart of a heartless world"</li>
+              <li><b>Ideological</b>. It defers reward to the afterlife and justifies inequality</li>
+            </ul>
+          </div>
+          <div class="thinker durkheim">
+            <div class="avatar">D</div>
+            <h4>Émile Durkheim</h4>
+            <div class="years">Ritual and solidarity</div>
+            <ul>
+              <li><em>The Elementary Forms of the Religious Life</em> (1912), on Aboriginal <b>totemism</b></li>
+              <li>Religion divides the <b>sacred</b> from the <b>profane</b></li>
+              <li>The totem stands for the group, so the real object of worship is <b>society itself</b></li>
+              <li>Ritual creates <b>collective effervescence</b> and renews solidarity</li>
+            </ul>
+          </div>
+          <div class="thinker weber">
+            <div class="avatar">W</div>
+            <h4>Max Weber</h4>
+            <div class="years">World religions and change</div>
+            <ul>
+              <li>Religion can drive <b>social change</b> as well as preserve order</li>
+              <li>Calvinist Protestantism and the spirit of capitalism</li>
+              <li>Hinduism as <b>other-worldly</b>, Confucianism as harmony with the world</li>
+              <li>Christianity as a <b>salvation religion</b> with a revolutionary side</li>
+            </ul>
+          </div>
+        </div>
+        <p>None of the three was devout, and all expected science and reason to <b>disenchant</b> the world. Each is partly right. Marx fits Christianity's role in colonialism and slavery. Weber fits the churches' part in abolition, the US civil rights movement and Solidarity in Poland. Durkheim's stress on ritual holds for births, marriages, deaths and even graduations. Critics of Durkheim say you cannot generalise from a few small societies, that his view fits multi-faith societies poorly, and that it is <b>reductionist</b>.</p>
+
+        <h3>Secularization</h3>
+        <p><dfn>Secularization</dfn> is the process by which religion loses its influence over the spheres of social life. It has three dimensions.</p>
+        <ol>
+          <li><b>Membership</b> and attendance at religious organisations.</li>
+          <li>The <b>social influence</b>, wealth and prestige of those organisations.</li>
+          <li><b>Religiosity</b>, meaning beliefs and values.</li>
+        </ol>
+        <ul>
+          <li><b>Grace Davie</b> described western Europe as <dfn>believing without belonging</dfn>, and later spoke of <b>vicarious religion</b>, where an active minority practises on behalf of the rest.</li>
+          <li><b>Voas</b> speaks of <b>fuzzy fidelity</b>. He and Bruce suggest most people neither believe nor belong. The Sunday Assemblies suggest "belonging without believing".</li>
+          <li><b>Charles Taylor</b> describes a <b>secular age</b> in which a life with no goal beyond human flourishing becomes imaginable for masses of people.</li>
+          <li>Religiosity tends to fall as living standards rise. The <b>USA</b> is the main exception among rich countries.</li>
+        </ul>
+
+        <h3>Beyond the secularization thesis</h3>
+        <ul>
+          <li><b>Michel Maffesoli</b> speaks of the "time of the tribes". People form <dfn>neo-tribes</dfn>, which are small, fluid, short-lived groups based on shared tastes. Following Durkheim, this search for sociability is itself religious. He argues against both individualization theory and mass society theory.</li>
+          <li><b>Lived religion.</b> Bellah found privatised faith in the USA, as in "<b>Sheilaism</b>". He feared it was shallow. <b>Maguire</b> replied that this is a Western bias toward organised religion, and that an individual's <dfn>bricolage</dfn>, like "Laura's" home altar, makes a meaningful whole.</li>
+          <li><b>Verdict.</b> The traditional churches have declined on all three dimensions in the Global North. But religion persists in new forms, and there is little sign of secularization outside the Global North.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Sacred and profane</dt><dd>Durkheim's division between things set apart and venerated, and the routine things of everyday life.</dd></div>
+          <div><dt>Collective effervescence</dt><dd>Durkheim's term for the heightened energy felt in group gatherings and rituals, which renews solidarity.</dd></div>
+          <div><dt>Totemism</dt><dd>The veneration of an animal or plant that symbolises a social group, which Durkheim took as the elementary form of religion.</dd></div>
+          <div><dt>Opium of the people</dt><dd>Marx's phrase for religion as a comfort that dulls the pain of oppression and diverts attention from injustice.</dd></div>
+          <div><dt>Secularization</dt><dd>The process through which religion loses influence over the various spheres of social life.</dd></div>
+          <div><dt>Believing without belonging</dt><dd>Davie's description of people who keep religious beliefs but do not attend or join churches.</dd></div>
+          <div><dt>Neo-tribes</dt><dd>Maffesoli's small, fluid, voluntary groups based on shared tastes, which meet the need for sociability.</dd></div>
+          <div><dt>Bricolage</dt><dd>The do-it-yourself blending of religious and secular elements into a personal faith.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Compare Marx, Durkheim and Weber on religion in a few lines each.</li>
+            <li>The three types of definition, and which one Durkheim's is.</li>
+            <li>The three dimensions of secularization, and the evidence for and against the thesis.</li>
+            <li>Neo-tribes and lived religion as alternatives to a simple story of decline.</li>
+            <li>Does religion always support the status quo? Use Marx against Weber.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         08 · MODULE 8 - EDUCATION
+    ============================================================ -->
+    <section class="section" id="edu" data-num="08" data-title="Education & Cultural Reproduction (Giddens)">
+      <div class="section-head">
+        <div class="section-index">08</div>
+        <div class="htext">
+          <h2>Education and Cultural Reproduction</h2>
+          <div class="source">Module 8 · <b>Giddens, <em>Sociology</em> (9th ed.), from Chapter 16, "Education"</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p><dfn>Cultural reproduction</dfn> is the passing on of cultural values, norms and experience from one generation to the next, and the mechanisms by which this happens. The reading shows how schools, which are thought to be open to all, reproduce inequality. It ends with Reay's line that education "cannot compensate for society". The system works as an "enormous academic sieve".</p>
+        <p>The extract opens with the end of <b>Ivan Illich's</b> case for <b>deschooling</b>. He wanted libraries, skill-sharing networks and vouchers in place of compulsory schools, an idea that looks less far-fetched with online learning.</p>
+
+        <h3>Bernstein, language codes</h3>
+        <ul>
+          <li>Working-class children tend to use a <dfn>restricted code</dfn>. Speech is tied to its setting and full of unstated assumptions, and it suits practical experience better than abstract ideas.</li>
+          <li>Middle-class children acquire an <dfn>elaborated code</dfn>. Meanings are made explicit and fitted to the situation, which makes it easier to generalise. The example is "No more sweets for you!" against an explanation about health and teeth.</li>
+          <li>Schools run on the elaborated code, so middle-class children fit in. Bernstein's claim is that the restricted code <b>clashes</b> with the culture of the school, and he denies that it is an inferior way of speaking.</li>
+          <li><b>Criticism.</b> It is called a <b>deficit hypothesis</b> and elitist, and thin on evidence about life inside schools.</li>
+        </ul>
+
+        <h3>Willis, <em>Learning to Labour</em> (1977)</h3>
+        <p>Willis asked "how working-class kids get working-class jobs". The usual answer is that failure at school teaches them their limits. He rejected it. He spent time with "<b>the lads</b>", a group of white working-class boys in a Birmingham school. They understood the school's authority system well and used that knowledge to fight it. Their <b>counter-school culture</b> of banter, quick wit and subverting authority <b>mirrors the shop-floor culture</b> of the jobs they move into. They take manual work with an attitude of "dismissive superiority" and do not feel they have failed. Only later do they find themselves trapped. The limit of the study is that it covers white working-class boys only.</p>
+        <p><b>Mac an Ghaill (1994)</b> returned twenty years later, after manufacturing had collapsed. His "<b>macho lads</b>" valued the 3 Fs over the 3 Rs and thought schoolwork effeminate. They were building a manual working-class masculinity when the manual jobs had gone, which he calls a <b>crisis of masculinity</b>.</p>
+
+        <h3>Bourdieu, capital, field and habitus</h3>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>Form of capital</th><th>What it is</th></tr></thead>
+            <tbody>
+              <tr><th>Economic</th><td>Money and property, Marx's sense of capital</td></tr>
+              <tr><th>Social</th><td>Membership of well-connected networks, "knowing the right people"</td></tr>
+              <tr><th>Cultural</th><td>Knowledge, skills and credentials gained in the family and through education</td></tr>
+              <tr><th>Symbolic</th><td>Prestige, status and honour</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>The forms of capital can be <b>exchanged</b> for one another.</li>
+          <li>A <dfn>field</dfn> is an arena of competitive struggle with its own "rules of the game".</li>
+          <li><dfn>Habitus</dfn> is the set of learned dispositions, such as bearing, speech and ways of thinking, that people take on from their social conditions. It links structure to individual action. Bernstein's codes are part of habitus.</li>
+          <li><dfn>Cultural capital</dfn> exists in three states. <b>Embodied</b> (how we speak and carry ourselves), <b>objectified</b> (books, art, clothes), and <b>institutionalized</b> (qualifications).</li>
+          <li>Schools reward the cultural capital that middle-class children bring from home. Because the system looks open to talent, working-class children blame themselves for failing.</li>
+        </ul>
+        <p><b>Lareau (2003)</b> studied twelve US families. Middle-class parents practise <b>concerted cultivation</b>, which produces a sense of entitlement. Working-class parents allow <b>natural growth</b>, which produces distance and constraint. Parenting varied more by class than by ethnicity. <b>Calarco (2018)</b> found that middle-class children ask for help loudly and often and so win a <b>negotiated advantage</b> from teachers.</p>
+        <p><b>Criticism of Bourdieu.</b> It can seem impossible for working-class children to succeed, yet many do. Working-class pupils who accept their situation may still think the system unfair.</p>
+
+        <h3>Reproducing gender divisions</h3>
+        <ul>
+          <li>Until the 1970s research looked mainly at boys. Feminist work showed schools socialising girls into feminine norms.</li>
+          <li><b>Stanworth</b> found girls got less teacher attention, a <b>self-fulfilling prophecy</b>. <b>Spender</b> found an unwitting sexism in the curriculum, and <b>Sharpe</b> found girls steered to "feminine" subjects.</li>
+          <li><b>Renold</b> describes <b>heterosexualization</b> from primary school on. Ringrose and Renold speak of "normative cruelties".</li>
+          <li>Today girls outperform boys at almost every level, which has started a debate on a crisis of masculinity.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Cultural reproduction</dt><dd>The passing on of values, norms and experience across generations, and so of social inequalities.</dd></div>
+          <div><dt>Restricted code</dt><dd>Bernstein's term for context-bound speech with many unstated assumptions, typical of working-class homes.</dd></div>
+          <div><dt>Elaborated code</dt><dd>Bernstein's term for explicit, context-free speech that suits abstract ideas and matches the culture of schools.</dd></div>
+          <div><dt>Counter-school culture</dt><dd>Willis's term for the lads' active resistance to school, which prepares them for shop-floor work.</dd></div>
+          <div><dt>Cultural capital</dt><dd>Bourdieu's term for knowledge, skills, manners and credentials that can be converted into advantage.</dd></div>
+          <div><dt>Habitus</dt><dd>Bourdieu's term for the learned dispositions of body, speech and thought that people acquire from their social conditions.</dd></div>
+          <div><dt>Field</dt><dd>Bourdieu's term for a social arena of competition with its own rules and its own valued forms of capital.</dd></div>
+          <div><dt>Concerted cultivation</dt><dd>Lareau's term for the middle-class parenting style of constant discussion and organised activities.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Compare Bernstein, Willis and Bourdieu on why working-class children do less well.</li>
+            <li>The four forms of capital and the three states of cultural capital.</li>
+            <li>Willis's point that the lads actively resist school, and how this still reproduces class.</li>
+            <li>One criticism each of Bernstein, Willis and Bourdieu.</li>
+            <li>Link to H1. This extends the stratification and meritocracy material from Module 5.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         09 · MODULE 8 - GLOBAL CULTURE AND CULTURAL FLOWS
+    ============================================================ -->
+    <section class="section" id="flows" data-num="09" data-title="Global Culture & Cultural Flows (Ritzer)">
+      <div class="section-head">
+        <div class="section-index">09</div>
+        <div class="htext">
+          <h2>Global Culture and Cultural Flows</h2>
+          <div class="source">Module 8 · <b>Ritzer and Dean, <em>Globalization: A Basic Text</em>, Chapter 8</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>Culture flows around the globe more easily than ever, above all in digital form. The chapter sets out three views of what these flows do.</p>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>Perspective</th><th>Claim</th><th>Key names and terms</th></tr></thead>
+            <tbody>
+              <tr><th>Cultural differentialism</th><td>Cultures are essentially different and only touched on the surface by global flows. Contact risks "catastrophic collision".</td><td>Huntington, the clash of civilizations</td></tr>
+              <tr><th>Cultural hybridization</th><td>The global and the local mix to give new hybrid cultures. Variety increases.</td><td>Robertson's glocalization, creolization, Appadurai's scapes</td></tr>
+              <tr><th>Cultural convergence</th><td>Globalization makes cultures more alike.</td><td>Cultural imperialism, world culture, McDonaldization, grobalization of nothing</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Differentialism</h3>
+        <p><b>Samuel Huntington</b> argued that after the Cold War the main fault lines became cultural, replacing the political and economic ones of the Cold War. More contact between "civilizations" such as the Sinic, Islamic, Orthodox and Western would bring clashes, with economic conflict between the West and the Sinic world and bloody conflict between the West and Islam. The theory has been criticised on many grounds, above all for portraying Muslims as prone to violence. The chapter also treats the spread of the world religions as a form of globalization more than 2,000 years old.</p>
+
+        <h3>Hybridization</h3>
+        <ul>
+          <li><dfn>Glocalization</dfn> (<b>Roland Robertson</b>) is the interpenetration of the global and the local, giving unique outcomes in different places. The world grows more plural, individuals and local groups are creative agents, and commodities and media give people material to use in their own way.</li>
+          <li><dfn>Hybridization</dfn> is the mixing of outside and inside flows into a new cultural hybrid. <dfn>Creolization</dfn> is the combining of languages and cultures that could not previously understand each other.</li>
+          <li>Examples are <b>Muslim Girl Scouts</b> in the US, who wear the sash with a headscarf and eat halal hot dogs, and <b>salsa</b>, which is danced differently in Cuba, Puerto Rico and Colombia.</li>
+        </ul>
+        <div class="callout key">
+          <div class="clabel">Appadurai's five landscapes</div>
+          <p>From <em>Modernity at Large</em> (1996). <b>Ethnoscapes</b> are flows of people such as tourists, migrants and refugees. <b>Technoscapes</b> are flows of technology. <b>Financescapes</b> are flows of money. <b>Mediascapes</b> are flows of images and information through the media. <b>Ideoscapes</b> are flows of political images and ideas. The scapes move at different speeds and in different directions, and the <dfn>disjunctures</dfn> between them produce cultural difference. Japan, for example, is open to ideas and closed to immigration.</p>
+        </div>
+
+        <h3>Convergence</h3>
+        <ul>
+          <li><dfn>Cultural imperialism</dfn>. One culture imposes itself on another and tends to destroy parts of it. The main criticism rests on <dfn>deterritorialization</dfn>, the idea that it is now hard to tie a culture to one place of origin.</li>
+          <li><b>World culture</b>. Global models spread, so that states and organisations around the world come to look alike.</li>
+          <li><dfn>McDonaldization</dfn>. The principles of the fast-food restaurant spread to more sectors and more of the world. They are <b>efficiency, calculability, predictability and control</b>. This is Weber's rationalization brought up to date.</li>
+          <li><dfn>Grobalization</dfn> is the companion of glocalization. It is the drive of nations, corporations and organisations to impose themselves around the world so that their power and profits grow. Its three engines are capitalism, Americanization and McDonaldization.</li>
+          <li>The <b>globalization of nothing</b>. <b>Nothing</b> means forms largely empty of distinctive content, and <b>something</b> means forms rich in it. Empty forms are easier to export. The four types are <b>non-places</b> (malls), <b>non-things</b> (credit cards), <b>non-people</b> (scripted telemarketers) and <b>non-services</b> (ATMs).</li>
+          <li><b>Sport</b> shows the glocal and the grobal at work together.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Cultural differentialism</dt><dd>The view that cultures are lastingly different and only superficially affected by globalization.</dd></div>
+          <div><dt>Glocalization</dt><dd>Robertson's term for the interpenetration of the global and the local, producing unique results in different places.</dd></div>
+          <div><dt>Scapes</dt><dd>Appadurai's five global flows of people, technology, money, media and ideas, whose disjunctures produce cultural hybrids.</dd></div>
+          <div><dt>Cultural imperialism</dt><dd>The imposition of one culture on another, tending to destroy parts of the receiving culture.</dd></div>
+          <div><dt>Deterritorialization</dt><dd>The loosening of the tie between a culture and a particular geographic place.</dd></div>
+          <div><dt>McDonaldization</dt><dd>Ritzer's term for the spread of fast-food principles (efficiency, calculability, predictability, control) across society.</dd></div>
+          <div><dt>Grobalization</dt><dd>Ritzer's term for the imperial ambitions of nations and corporations to impose themselves worldwide and grow.</dd></div>
+          <div><dt>Nothing</dt><dd>Ritzer's term for social forms largely empty of distinctive content, such as chain malls and credit cards.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>The three perspectives, with one thinker and one example for each.</li>
+            <li>Name and define Appadurai's five scapes, and explain disjuncture.</li>
+            <li>Glocalization against grobalization, and something against nothing.</li>
+            <li>The four principles of McDonaldization and their debt to Weber.</li>
+            <li>The chapter's own question. Critique differentialism and convergence using the idea of scapes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         10 · MODULE 8 - TRUE SCHOOL
+    ============================================================ -->
+    <section class="section" id="hiphop" data-num="10" data-title="True School (Harkness)">
+      <div class="section-head">
+        <div class="section-index">10</div>
+        <div class="htext">
+          <h2>True School: Situational Authenticity in Chicago's Hip-Hop Underground</h2>
+          <div class="source">Module 8 · <b>Geoff Harkness (2012), <em>Cultural Sociology</em></b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The question</h3>
+        <p>How do outsiders take part in a subculture whose insiders call them inauthentic? In Chicago's underground, non-commercial hip-hop scene the <b>insiders</b> are black and Latino male rappers from the urban core. The <b>outsiders</b> are white, female, or suburban rappers.</p>
+        <p><b>Method.</b> A six-year qualitative study. He attended more than <b>500 live performances</b> and held <b>135 in-depth interviews</b>, all videotaped. Only six interviewees were women.</p>
+
+        <h3>Earlier work, and what it misses</h3>
+        <ul>
+          <li>A <dfn>boundary</dfn> is a socially constructed barrier between groups (Lamont and Molnar). <b>Bourdieu</b> says the struggle between "authentic" and "fake" is what gives culture its value.</li>
+          <li><b>Hebdige</b> studied the borrowing of reggae style. He overlooked that borrowing has limits.</li>
+          <li><b>Grazian</b> proposed a <b>sliding scale</b> of authenticity for Chicago blues. It ranks people too rigidly.</li>
+          <li><b>Thornton</b> gave us <dfn>subcultural capital</dfn>, building on Bourdieu.</li>
+          <li><b>McLeod</b> listed six dimensions of hip-hop authenticity. True to self against following trends, black against white, underground against commercial, hard against soft, street against suburbs, old-school against mainstream.</li>
+        </ul>
+        <p>None of these explains how outsiders still manage to take part.</p>
+
+        <div class="callout key">
+          <div class="clabel">Situational authenticity</div>
+          <p>The model authentic rapper is a black male from the urban core who is underground, skilled and true to himself. These conditions are of two kinds. <b>Fixed categories</b> are race and gender. <b>Interpretive categories</b> are skill and being true to oneself. <dfn>Situational authenticity</dfn> is a claim to "realness" that <b>stresses some conditions in this cluster and plays down others</b>, depending on the context. Outsiders stress the interpretive ones and blur the fixed ones. Insiders stress the fixed ones to guard their status. The audience then accepts or rejects the claim. The framework explains but does not predict.</p>
+        </div>
+        <p>The opening case is <b>Nexxus</b>, a skilled black rapper who was jeered by a Puerto Rican audience in Humboldt Park. In that setting his blackness made him the outsider. Even the model insider can be fake in the wrong context.</p>
+
+        <h3>Three boundaries</h3>
+        <ul>
+          <li><b>Race.</b> Insiders said "hip-hop is black culture" and spoke of whites in coded terms, such as "he didn't have no pain". <b>Alo</b>, a Latino who looks white, was treated as a nerd until people learned his ethnicity. White rapper <b>Bobby Lovelock</b> invented the label "<b>true school</b>" for whites who grew up with hip-hop and represent it faithfully. Eminem's acceptance shows boundaries shifting over time.</li>
+          <li><b>Gender.</b> This was the most resilient boundary, and was met with indifference more than hostility, which shows how hegemonic it is. Keyes's four types are Queen Mother, Sista with Attitude, Fly Girl and Lesbian. <b>Pinqy Ring</b> became "one of the guys". <b>Marcy C</b> won a rap battle against a well-known male rapper, a moment when the conditions were reordered.</li>
+          <li><b>Class.</b> The most mutable, because class markers are open to interpretation. The city stands for real and the suburbs for fake. Suburban rappers answered by rapping honestly about suburban life, or by blurring the line ("Elgin ain't nothing but a mini Chicago").</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>Harkness concludes that authenticity is <b>situational</b>, where earlier models treated it as a fixed set of standards. Outsiders often <b>uphold the very boundaries that keep them out</b> while showing that they are the exception. Boundaries are rigid and malleable at once. A rejected claim confirms the norms, and an accepted claim opens the way to <b>cultural change</b>. The same thing happens outside hip-hop, with craft coffee, local shops and the like. As Bourdieu saw, there is no "real" without a "fake".</p>
+
+        <div class="defs">
+          <div><dt>Situational authenticity</dt><dd>Harkness's term for claims to realness that stress some conditions of authenticity and play down others according to context.</dd></div>
+          <div><dt>Fixed categories</dt><dd>Conditions of authenticity that are hard to change, such as race and gender, which insiders stress.</dd></div>
+          <div><dt>Interpretive categories</dt><dd>Conditions open to judgement, such as skill and being true to oneself, which outsiders stress.</dd></div>
+          <div><dt>Boundary work</dt><dd>The practices and talk by which groups create, maintain and sometimes cross the lines between insiders and outsiders.</dd></div>
+          <div><dt>Subcultural capital</dt><dd>Thornton's term, after Bourdieu, for the knowledge, style and standing that earn status inside a subculture.</dd></div>
+          <div><dt>True school</dt><dd>A white rapper's label for non-original hip-hoppers who grew up with the culture and represent it faithfully.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define situational authenticity using fixed and interpretive categories.</li>
+            <li>One example each for race, gender and class, and which boundary is hardest to cross.</li>
+            <li>How Harkness improves on Grazian's sliding scale and McLeod's six dimensions.</li>
+            <li>Why outsiders end up reinforcing the boundaries they cross.</li>
+            <li>Link to Bourdieu in the education reading, through habitus and capital, and to glocalization.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         11 · MODULE 8 - CRITICAL THEORY
+    ============================================================ -->
+    <section class="section" id="frankfurt" data-num="11" data-title="Critical Theory (Giddens)">
+      <div class="section-head">
+        <div class="section-index">11</div>
+        <div class="htext">
+          <h2>Neo-Marxism: the Frankfurt School of Critical Theory</h2>
+          <div class="source">Module 8 · <b>Giddens, <em>Sociology</em> (9th ed.), Classic studies 3.1</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The problem</h3>
+        <p>Marx forecast a working-class revolution. The Russian Revolution of 1917 seemed to prove him right, but communism did not spread to the industrial countries. The 1930s brought <b>fascism in Italy and Nazism in Germany</b> instead. Was Marx's theory still adequate? Those who thought it needed rebuilding produced <dfn>neo-Marxism</dfn>. Among the "Western Marxists" who rejected the Soviet model, the most influential group was the <b>Frankfurt School</b>.</p>
+
+        <h3>The school and its work</h3>
+        <ul>
+          <li>It was based at the <b>Institute for Social Research</b> in Frankfurt under <b>Max Horkheimer</b>. The Nazis forced many members into exile in Europe and America.</li>
+          <li>It drew on <b>Marx, Freud and Kant</b>, and studied capitalism, fascism, mass culture and the new consumer society.</li>
+          <li><b>Theodor Adorno</b> and colleagues explained the appeal of fascism partly through the <dfn>authoritarian personality</dfn>, a type drawn to a strong leader.</li>
+          <li><b>Herbert Marcuse</b>, in <em>One-Dimensional Man</em> (1964), separated "real" needs from the <dfn>false needs</dfn> created by consumer capitalism and its advertising, which suppress critical thought.</li>
+          <li>The focus moved <b>from the economy to culture</b>, and Marx's optimism about revolution faded.</li>
+        </ul>
+
+        <h3>Habermas</h3>
+        <p><b>Jürgen Habermas</b> is the most recent major critical theorist. His theory of <dfn>communicative action</dfn> starts from the point that when people make statements, or <b>speech acts</b>, they expect to be understood. Unequal power <b>distorts communication</b>. In talks between employers and unions, for example, the employers' power settles the dispute where "the force of the better argument" should. His answer is to <b>deepen modernity</b>, against the postmodern thinkers who would abandon it. That means defending and extending democracy and removing the inequalities that block equal, rational argument.</p>
+
+        <h3>Marxism today</h3>
+        <p>After the Soviet Union ended in 1991, Marxist ideas lost ground. The <b>2008 financial crisis</b> reminded scholars that capitalism runs on booms and slumps. <b>Slavoj Žižek</b> still argues that communism is the only real alternative.</p>
+
+        <div class="defs">
+          <div><dt>Neo-Marxism</dt><dd>New forms of Marxist theory developed in the twentieth century to explain why the predicted revolution did not come.</dd></div>
+          <div><dt>Frankfurt School</dt><dd>The group of critical theorists around Horkheimer, Adorno and Marcuse who studied culture, fascism and consumer capitalism.</dd></div>
+          <div><dt>Authoritarian personality</dt><dd>Adorno's personality type that is susceptible to strong leaders, used to explain support for fascism.</dd></div>
+          <div><dt>False needs</dt><dd>Marcuse's term for wants manufactured by consumer capitalism that dull people's capacity for critical thought.</dd></div>
+          <div><dt>One-dimensional thought</dt><dd>Marcuse's term for the uncritical thinking produced by advertising and consumer society.</dd></div>
+          <div><dt>Communicative action</dt><dd>Habermas's idea that speech aims at mutual understanding, which unequal power relations systematically distort.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Giddens's own question. Why has the communist revolution forecast by Marx not materialized?</li>
+            <li>Adorno, Marcuse and Habermas, with one idea each.</li>
+            <li>The shift of Marxist attention from economy to culture.</li>
+            <li>Tie to Grint, who notes that this shift is why Marxists stopped studying the labour process until Braverman.</li>
+            <li>Tie to Module 9. Cruel companionship and passive investors can both be read as false needs and managed consent.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         12 · MODULE 9 - ETHNOGRAPHY FOR THE INTERNET
+    ============================================================ -->
+    <section class="section" id="hine" data-num="12" data-title="Ethnography for the Internet (Hine)">
+      <div class="section-head">
+        <div class="section-index">12</div>
+        <div class="htext">
+          <h2>Ethnography for the Internet</h2>
+          <div class="source">Module 9 · <b>Christine Hine (2015), <em>Ethnography for the Internet: Embedded, Embodied and Everyday</em>, Chapters 1 and 2</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The problem</h3>
+        <p>Ethnography aims at what <b>Geertz</b> called <dfn>thick description</dfn>. It gets at how people make sense of their lives by spending time with them and taking part. Everyday life is now saturated with computer-mediated communication, so ethnographers must follow people into it. Hine rejects the idea that mediated communication is not good enough for ethnography. If that is what people do, the ethnographer must do it with them.</p>
+        <p>The difficulty is that mediation breaks up the idea of a single "situation". You cannot be with both people on a phone call. You cannot know which friends saw a Facebook status or what they made of it. The ethnographer must live with "a perpetual feeling of uncertainty". Ethnography of mediated communication therefore seems "both necessary and doomed".</p>
+        <p>Her way out is that ethnography is an <b>adaptive</b>, "boot-strapping" method, built afresh for each setting. If uncertainty is part of how participants themselves live, then experiencing that uncertainty is the ethnographer's job.</p>
+
+        <div class="callout key">
+          <div class="clabel">Why "for" the Internet</div>
+          <p>The Internet is too big to grasp as one whole object, which rules out an ethnography <b>of</b> it. Working only <b>through</b> the Internet falls short too, because understanding online activity often means studying the face-to-face settings where it is produced and used. Hine settles on ethnography <b>for</b> the Internet, adapted to the conditions the Internet creates.</p>
+        </div>
+
+        <h3>Site and artefact</h3>
+        <p>In her earlier <em>Virtual Ethnography</em> (2000) Hine argued that the Internet is both a <dfn>cultural site</dfn>, a place where people do things, and a <dfn>cultural artefact</dfn>, an object given meaning in other contexts. Ethnography can cover both. Field sites are <b>constructed</b> by the researcher's choices and may move across online and offline.</p>
+
+        <h3>The E3 Internet</h3>
+        <div class="tablewrap">
+          <table class="compare">
+            <thead><tr><th>The Internet is</th><th>Meaning</th><th>Challenge for the ethnographer</th></tr></thead>
+            <tbody>
+              <tr><th>Embedded</th><td>It is entwined with many contexts, institutions and devices. The early picture of <b>cyberspace</b>, a separate frontier set apart from real life as Gibson and Barlow imagined, no longer fits.</td><td>Follow connections outward across online and offline. Do not treat the online as a self-contained site.</td></tr>
+              <tr><th>Embodied</th><td>Being online extends other embodied ways of being. We do not "leave the meat behind". Online and offline identities are continuous, and people are judged on whether their online self is authentic.</td><td>The experience is personal, so the ethnographer's own embodied experience becomes data. This calls for reflexive and autoethnographic strategies.</td></tr>
+              <tr><th>Everyday</th><td>It is a mundane, unremarkable <b>infrastructure</b>, noticed mainly when it breaks down. Now and then it becomes "topicalized" in media and politics.</td><td>Make the taken-for-granted visible. Infrastructures do <b>invisible work</b> and carry built-in choices (Bowker and Star).</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The three Es are a device for naming challenges. Hine does not claim they describe the whole Internet or that they are new.</p>
+
+        <h3>Conclusions</h3>
+        <ul>
+          <li>The approach is <b>multi-modal</b>. The online and offline boundary is not a principled limit on a field site.</li>
+          <li>Keep a <dfn>symmetrical skepticism</dfn>, both toward claims that the Internet brings radical change and toward claims that nothing has changed or that it is unremarkable.</li>
+          <li>Look closely at moments when <b>technical decisions</b> are made. They shape social ordering and reveal values that are otherwise unspoken.</li>
+          <li>Ethnography is <b>purposive</b>: the researcher chooses what to pursue, and those choices help constitute the object studied. There is no single correct model.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Thick description</dt><dd>Geertz's term, borrowed from Ryle, for an account that conveys the layers of meaning behind an action.</dd></div>
+          <div><dt>E3 Internet</dt><dd>Hine's shorthand for the contemporary Internet as embedded, embodied and everyday.</dd></div>
+          <div><dt>Embedded Internet</dt><dd>The Internet as entwined with many contexts and frames of meaning, in contrast to the older idea of a separate cyberspace.</dd></div>
+          <div><dt>Embodied Internet</dt><dd>The Internet as experienced through the body and continuous with offline identity.</dd></div>
+          <div><dt>Everyday Internet</dt><dd>The Internet as a mundane infrastructure that becomes invisible until it fails or is made a public topic.</dd></div>
+          <div><dt>Cultural site and cultural artefact</dt><dd>Hine's two ways of seeing the Internet, as a place where culture happens and as an object given meaning in other settings.</dd></div>
+          <div><dt>Symmetrical skepticism</dt><dd>Doubting equally the claim that the Internet changes everything and the claim that it changes nothing.</dd></div>
+          <div><dt>Cyberspace</dt><dd>The early image of the Internet as a separate realm free of real-world bodies, structures and inequalities.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Explain embedded, embodied and everyday, with the challenge each poses.</li>
+            <li>Why Hine chooses "for" over "of" and "through" in her title.</li>
+            <li>Why online ethnography looks "necessary and doomed", and how adaptiveness resolves it.</li>
+            <li>The Internet as cultural site and as cultural artefact.</li>
+            <li>Apply it. Hayes and the RTI paper are both ethnographies that mix online use, interviews and documents.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         13 · MODULE 9 - RTI
+    ============================================================ -->
+    <section class="section" id="rti" data-num="13" data-title="Safer Civic Participation (RTI)">
+      <div class="section-head">
+        <div class="section-index">13</div>
+        <div class="htext">
+          <h2>Human Mediation and Cooperative Infrastructure in India's RTI Ecosystem</h2>
+          <div class="source">Module 9 · <b>Shravani K, Neha Murthy, Maitreya Chitale, Rajorshi Ray and Kareem Ansari (IndiaHCI 2026), "Designing Safer Civic Participation"</b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>The contradiction</h3>
+        <p>The <b>Right to Information Act, 2005</b> lets citizens hold the state to account by asking for information. Over <b>1.7 million</b> requests were filed in 2024 to 2025. Yet the visibility that transparency requires can expose the citizen to <b>intimidation, harassment and violence</b>. The Commonwealth Human Rights Initiative has recorded assaults and murders linked to RTI use, such as the killing of <b>Nalla Ramakrishnaiah</b> in Telangana after he exposed an illegal land encroachment. The Whistle Blowers Protection Act, 2014 was never put into operation.</p>
+        <p>Part of the risk is <b>produced by the filing process itself</b>, whatever the subject of the request. Section 6(2) says an applicant need give only contact details. But the request passes through local offices, several officials and postal records, and this <dfn>visibility chain</dfn> makes the requester identifiable to the very officials being questioned. The paper's question is how <b>partial opacity</b> in a civic infrastructure lets citizens seek accountability safely.</p>
+
+        <h3>The case and the method</h3>
+        <p><b>RTI-raahi</b> is a platform run by a long-standing NGO that the paper calls <b>Public Forum</b>. A citizen submits a request online. NGO staff review it, rewrite it in proper RTI language, strip out anything that identifies the person, and file it by registered post <b>under the organisation's name</b>. In the opening scene "Mr. Yunus" turns an urgent and emotional message about names dropped from a welfare list into a precise application on the NGO's letterhead.</p>
+        <p>The study is <b>mixed-methods</b>. It combines <b>situated ethnography</b> with <b>computational analysis of over 13,000 RTI requests</b>, using NLP-based thematic clustering (100 clusters, checked by people) and spatial analysis.</p>
+
+        <h3>Findings</h3>
+        <ul>
+          <li><b>RTI is a high-stakes civic interaction.</b> Retaliation, whether real or only feared, decides whether people file at all.</li>
+          <li><b>Cooperative mediation.</b> Staff <b>translate</b> the request into a form the bureaucracy must act on while leaving the citizen's question intact, and they absorb the visibility, legal responsibility and exposure themselves.</li>
+          <li><b>What gets filed.</b> The requests are overwhelmingly about <b>public-interest</b> matters, namely welfare delivery, land records, policing, labour rights and healthcare. No cluster was judged frivolous. This answers the worry that anonymous requests invite abuse. These are also the areas staff named as carrying the highest risk of retaliation. The authors are careful to say that without a comparison set of directly filed RTIs they cannot prove that anonymity causes this pattern.</li>
+        </ul>
+
+        <div class="callout key">
+          <div class="clabel">Protective civic infrastructure</div>
+          <p>The paper's core concept. A <dfn>protective civic infrastructure</dfn> is a system that supports accountability through <b>collective mediation</b> while reducing the exposure of the people taking part. It draws on four ideas. <b>Srinivasan's political information orders</b> hold that access to information is shaped by local power, bureaucracy and social hierarchy. <b>Benjamin's politics of stealth</b> describes how the vulnerable seek accountability while keeping their exposure low. <b>Scholz's platform cooperativism</b> holds that platforms need not be extractive as in platform capitalism, and can serve collective welfare. And <b>anonymity as infrastructure</b> treats anonymity as a condition of taking part at all.</p>
+        </div>
+
+        <h3>Discussion and design principles</h3>
+        <ul>
+          <li>There is a <b>deterrence effect before filing</b>. Those most at risk stay away, so the 1.7 million official requests are a <b>structurally biased sample</b>. Any judgement of RTI must count the participation it shut out.</li>
+          <li>The authors borrow Amartya Sen's use of <dfn>matsyanyaya</dfn>, where the big fish eats the small fish and no rule is broken. The procedure runs correctly and still delivers the requester's name to local power.</li>
+          <li><b>Anonymity should be a structural design requirement</b>. By default the requester's identity should stay out of administrative circulation without the user having to ask.</li>
+          <li><b>Human mediation is permanent and cannot be removed.</b> The rewriting depends on local bureaucratic knowledge and cannot be automated without losing its protection. The design question the authors pose is how to sustain the human in the loop.</li>
+          <li><b>Mind the paper bureaucracy.</b> Filing by post is deliberate, because the metadata from online filing is itself a surveillance risk.</li>
+          <li>Intermediary organisations are <b>central actors</b> in civic participation. The authors object to treating them as marginal workarounds.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Protective civic infrastructure</dt><dd>A system that enables accountability through collective mediation while reducing the exposure of individual participants.</dd></div>
+          <div><dt>Visibility chain</dt><dd>The path of offices, officials and records through which an RTI applicant's identity becomes known to those being questioned.</dd></div>
+          <div><dt>Human-in-the-loop mediation</dt><dd>NGO staff reviewing, rewriting and filing requests on citizens' behalf, a step the authors say cannot be automated.</dd></div>
+          <div><dt>Politics of stealth</dt><dd>Benjamin's term for how vulnerable people seek accountability while limiting their exposure to retaliation.</dd></div>
+          <div><dt>Platform cooperativism</dt><dd>Scholz's idea of digital platforms built for collective welfare and protection, in contrast to platforms built for data extraction.</dd></div>
+          <div><dt>Political information order</dt><dd>Srinivasan's term for the way access to information is structured by local power, bureaucracy and hierarchy.</dd></div>
+          <div><dt>Matsyanyaya</dt><dd>The "justice of fish", where the strong consume the weak although no formal rule is broken.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>The paradox of transparency, where the tool of accountability exposes the citizen.</li>
+            <li>How RTI-raahi works, step by step, and what "protective civic infrastructure" means.</li>
+            <li>The mixed method, and what the computational analysis adds to the ethnography.</li>
+            <li>Why human mediation should not be automated away.</li>
+            <li>Contrast with platform capitalism, and with the AI companion apps in the next reading.</li>
+            <li>Link to Harriss-White. Local officials and informal power are her "shadow state" seen from the citizen's side.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         14 · MODULE 9 - CRUEL COMPANIONSHIP
+    ============================================================ -->
+    <section class="section" id="cruel" data-num="14" data-title="Cruel Companionship (AI companions)">
+      <div class="section-head">
+        <div class="section-index">14</div>
+        <div class="htext">
+          <h2>Cruel Companionship: How AI Companions Exploit Loneliness and Commodify Intimacy</h2>
+          <div class="source">Module 9 · <b>James Muldoon and Jul Jeonghyun Parke (2025), <em>New Media &amp; Society</em></b></div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>What AI companions are</h3>
+        <p><dfn>AI companions</dfn> are generative-AI products designed to simulate ongoing, emotionally resonant interaction, with the aim of filling roles usually held by people, such as friend, partner or therapist. Examples are <b>Replika, Nomi and Character.ai</b>. The authors leave general-purpose models aside, because their financial incentives are different. All companions share three features, namely <b>empathic interaction, anthropomorphism and personalisation</b>.</p>
+        <p>They work on us because humans are social animals who read human traits into responsive objects. Gendler's term <dfn>alief</dfn> names an automatic response that conflicts with what we consciously believe. We know the companion is not real and respond to it emotionally anyway.</p>
+        <p>The authors take a <b>political economy and cultural studies</b> approach, which they set against the philosophy, psychology and computer science that dominate the field.</p>
+
+        <h3>Loneliness is socially produced</h3>
+        <ul>
+          <li>Loneliness is felt by individuals, but it is shaped by social structures and political and economic conditions.</li>
+          <li>Public investment in care, such as mental health services and community infrastructure, is in decline. This leaves a <b>care vacuum</b> that commercial technology moves into.</li>
+          <li>The <dfn>loneliness economy</dfn> is the market that profits from the emotional deficits of late capitalism. It <b>depoliticises</b> loneliness by treating a collective problem as a private one to be solved by buying something. This is the familiar Silicon Valley pattern that Morozov criticised.</li>
+        </ul>
+
+        <div class="callout key">
+          <div class="clabel">From cruel optimism to cruel companionship</div>
+          <p><b>Lauren Berlant's</b> <dfn>cruel optimism</dfn> is attachment to an object of desire, such as the "good life", that promises happiness and in fact stands in the way of your flourishing. Muldoon and Parke adapt it. In <dfn>cruel companionship</dfn> users form deep attachments that promise intimacy and connection, yet the product <b>structurally forecloses</b> a truly reciprocal relationship that respects their autonomy. The cruelty lies in the system's logic, which turns human loneliness into engagement metrics.</p>
+        </div>
+
+        <h3>The engagement-wellbeing paradox</h3>
+        <p>Users want to feel better while keeping their autonomy. Developers are pushed to maximise engagement and dependence. So firms can <b>profit from prolonging the loneliness they claim to cure</b>. The authors call this the <dfn>engagement-wellbeing paradox</dfn>, and they call the business model "<b>friendship-as-a-service</b>".</p>
+        <ul>
+          <li>Design removes <b>friction</b>. Companions are <b>sycophantic</b>, agreeable and always available, in the manner of dark patterns and of Schüll's gambling machines.</li>
+          <li><b>Freemium</b> pricing leads to <b>emotional upselling</b>, with locked voice messages and unrequested romantic or sexual turns.</li>
+          <li>Marketing <b>targets the vulnerable</b>, such as lonely men and people with childhood trauma.</li>
+          <li>When Replika removed erotic role-play in 2023, users grieved as if for a loved one, and forum moderators posted suicide-prevention information.</li>
+          <li>Privacy is poor. Mozilla found that over 90 per cent of the romantic AI apps it reviewed sold user data.</li>
+        </ul>
+
+        <h3>Three mechanisms</h3>
+        <ol>
+          <li><b>Affective investment.</b> Instant, affirming feedback builds a ritual of use that can become addictive, and leaving gets harder.</li>
+          <li><b>Asymmetry of power.</b> Only the user is vulnerable. The AI cannot understand or reciprocate, and the developer can change its personality, appearance and price without consent.</li>
+          <li><b>Substitution.</b> The companion stops being a supplement to human relationships and replaces them. The user stops building the skills that human relationships need.</li>
+        </ol>
+        <p>The authors present these as structural features of the apps and say they do not affect every user. Berlant's <b>slow death</b> and <b>impasse</b> describe the result, which is managed survival without repair. There are also hard limits. The AI has no lived understanding, no needs of its own, no friction that leads to growth, no reading of non-verbal cues and no body. Embedded advertising is a likely next step, and it fits the wider process of <dfn>datafication</dfn>, in which moods and desires become data commodities.</p>
+
+        <h3>Gendered and racialised design</h3>
+        <ul>
+          <li>Companions often embody the <dfn>smart wife</dfn> (Strengers and Kennedy), who is nurturing, always available and averse to conflict. This is a service-oriented femininity that gives care without asking for any in return.</li>
+          <li><b>Atanasoski and Vora's</b> <dfn>surrogacy</dfn> names the displacing of emotional labour onto programmed entities that cannot refuse.</li>
+          <li>There is a lineage of feminised technology, from typewriter girls to Siri and Alexa, Hatsune Miku, Xiaoice and Iruda.</li>
+          <li>Race is offered as a customisable and "exotic" trait. <b>Nakamura</b> points out that users can engage with racialised identities with none of the social responsibility. "Digital diversity" is curated to be comfortable. Asian-coded companions repeat the stereotype of the obedient and compliant minority.</li>
+          <li>The risk is that users get used to overly accommodating partners, which deepens the unequal division of emotional labour.</li>
+        </ul>
+
+        <div class="defs">
+          <div><dt>Cruel companionship</dt><dd>Attachment to an AI companion that promises intimacy but structurally rules out a reciprocal relationship, deepening dependence.</dd></div>
+          <div><dt>Cruel optimism</dt><dd>Berlant's term for attachment to something that promises a good life and in fact blocks one's flourishing.</dd></div>
+          <div><dt>Engagement-wellbeing paradox</dt><dd>The conflict between a user's wish to feel better and a company's incentive to maximise engagement and dependence.</dd></div>
+          <div><dt>Loneliness economy</dt><dd>The market that targets lonely people and profits from the emotional deficits of late capitalism.</dd></div>
+          <div><dt>Friendship-as-a-service</dt><dd>The business model of selling always-available emotional companionship by subscription.</dd></div>
+          <div><dt>Alief</dt><dd>Gendler's term for an automatic, instinctive response that conflicts with what one consciously believes.</dd></div>
+          <div><dt>Smart wife</dt><dd>Strengers and Kennedy's term for technology designed as a nurturing, compliant, feminised helper.</dd></div>
+          <div><dt>Datafication</dt><dd>The turning of lived experience, here moods and intimate disclosures, into quantified data for commercial use.</dd></div>
+        </div>
+
+        <div class="exam">
+          <div class="clabel"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Likely exam points</div>
+          <ul>
+            <li>Define cruel companionship and trace it back to Berlant's cruel optimism.</li>
+            <li>The engagement-wellbeing paradox and the three mechanisms.</li>
+            <li>Why the authors treat loneliness as socially produced.</li>
+            <li>How gender and race are built into the design, with the "smart wife" and surrogacy.</li>
+            <li>Compare with the RTI paper. One platform extracts from vulnerability, the other protects it.</li>
+            <li>Link to Module 4 and Module 6. This is care work and emotional labour made into a commodity, with Pasquinelli's ghost workers behind the screen.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="no-results" id="no-results">No sections match your search. Try another term.</div>
+
+    <footer class="foot">
+      <p><b>Intro to Sociology, Endsem Study Guide.</b> These notes are written up from the readings and slides for Modules 6 to 9 listed in the TAs' endsem syllabus, for revision only. Always check them against your own lectures. <a href="h1.html">Go to H1, the midsem guide</a>.</p>
+      <p>Built as a plain HTML, CSS and JS site. It follows your system's light or dark setting. © <span id="year"></span></p>
+    </footer>
+  </main>
+</div>
+
+<!-- Back to top -->
+<button class="totop" id="totop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- Flashcards modal -->
+<div class="modal" id="fc-modal" role="dialog" aria-modal="true" aria-label="Flashcards">
+  <div class="modal-inner">
+    <div class="fc-top">
+      <span class="ftitle">Key-term flashcards</span>
+      <span class="fcount" id="fc-count">0 / 0</span>
+      <button class="fc-close" id="fc-close" aria-label="Close flashcards">✕</button>
+    </div>
+    <div class="flashcard" id="fc">
+      <div class="fc-face">
+        <div class="fc-front">
+          <span class="kicker" id="fc-topic"></span>
+          <span class="term-big" id="fc-term"></span>
+          <span class="hint">click or press space to flip</span>
+        </div>
+        <div class="fc-back">
+          <span class="kicker" id="fc-topic-back"></span>
+          <span class="def" id="fc-def"></span>
+        </div>
+      </div>
+    </div>
+    <div class="fc-progress"><i id="fc-fill"></i></div>
+    <div class="fc-nav">
+      <button id="fc-prev">Prev</button>
+      <button class="primary" id="fc-next">Next</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>

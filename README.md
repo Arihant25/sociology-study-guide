@@ -1,42 +1,45 @@
-# Intro to Sociology — Midsem Study Guide
+# Intro to Sociology study guide
 
-An interactive, single-page study guide covering the Intro to Sociology midsem syllabus. Built with plain HTML, CSS, and JavaScript (no build step, no dependencies).
+Revision notes for Intro to Sociology (HS2.201), built with plain HTML, CSS and JavaScript. There is no build step.
 
-**Live site:** _enabled via GitHub Pages_ → `https://arihant25.github.io/sociology-study-guide/`
+**Live site:** `https://arihant25.github.io/sociology-study-guide/`
 
-## Syllabus covered
+## Pages
 
-| Source | Scope |
+| Page | What it covers |
 |---|---|
-| Giddens, *Sociology* (9th ed.) | Chapters 1, 2, 9 |
-| Grint, *The Sociology of Work* | Chapter 3 |
-| Module 1 | The Sociological Enterprise |
-| Module 3 | Marx, Weber, Durkheim |
-| Module 4 | Social Reproduction |
-| Module 5 | Stratification *(ongoing)* |
+| `index.html` | Landing page with two choices, H1 and H2 |
+| `h1.html` | Midsem portion: Modules 1, 3, 4 and 5, Giddens chapters 1, 2 and 9, Grint chapter 3, and the midsem paper with its answer key |
+| `h2.html` | Endsem portion: Modules 6 to 9 |
+
+## Endsem readings in H2
+
+| Module | Readings |
+|---|---|
+| 6. Work, Economy and Society | Pasquinelli, *The Eye of the Master*; Grint on Marx, Taylorism and Braverman |
+| 7. Economic Sociology | Harriss-White, *India's Socially Regulated Economy*; Hayes on roboadvisors; Dale on Polanyi and embeddedness |
+| 8. Sociology of Culture | Ulturgasheva, *Ghosts of the Gulag*; Giddens on religion, education and critical theory; Ritzer on global cultural flows; Harkness, *True School* |
+| 9. Digital Sociology | Hine, *Ethnography for the Internet*; the RTI paper on safer civic participation; Muldoon and Parke, *Cruel Companionship* |
 
 ## Features
 
-- **Scroll-spy table of contents** with reading-progress bar
-- **Revision tracker** — tick off sections, progress saved in your browser
-- **Flashcards** auto-built from every key-term glossary on the page
-- **Instant search** across all notes with match highlighting
-- **Light / dark** theme, remembered across visits
-- Fully responsive and **print-friendly** (⌘/Ctrl-P for a clean PDF)
+- Table of contents that follows your scroll position, with a reading rail
+- Flashcards built from the key-term glossary of each section
+- Search across all notes with match highlighting
+- Light and dark themes that follow the system setting
+- Print styles for a clean PDF
 
 ## Keyboard shortcuts
 
-- `/` or `Ctrl/⌘ + K` — focus search
-- In flashcards: `←` / `→` navigate · `Space` flip · `Esc` close
+- `/` or `Ctrl/⌘ + K` focuses search
+- In flashcards, `←` and `→` move between cards, `Space` flips, `Esc` closes
 
 ## Local preview
 
-Just open `index.html` in a browser, or serve the folder:
+Open `index.html` in a browser, or serve the folder:
 
 ```bash
 python -m http.server 8000
 ```
 
----
-
-*Notes are distilled from the assigned course readings for revision purposes.*
+The notes are written up from the assigned course readings for revision. Check them against your own lectures.
